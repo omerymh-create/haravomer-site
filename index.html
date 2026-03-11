@@ -57,7 +57,52 @@ font-size:16px;
 .contact-btn.whatsapp{
 background:#25D366;
 }
+/* WhatsApp testimonials */
 
+.wa-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:30px;
+}
+
+.wa-chat{
+background:#e5ddd5;
+padding:20px;
+border-radius:15px;
+display:flex;
+justify-content:flex-end;
+direction:rtl;
+}
+
+.wa-bubble{
+background:#ffffff;
+padding:16px 18px;
+border-radius:14px;
+max-width:100%;
+font-size:16px;
+line-height:1.6;
+text-align:right;
+box-shadow:0 2px 5px rgba(0,0,0,0.15);
+position:relative;
+}
+
+.wa-bubble:after{
+content:"";
+position:absolute;
+right:-8px;
+top:10px;
+border-width:8px;
+border-style:solid;
+border-color:transparent transparent transparent #ffffff;
+}
+
+.wa-time{
+font-size:12px;
+color:#888;
+margin-top:6px;
+text-align:left;
+}
 </style>
 </style>
 </head>
@@ -290,6 +335,7 @@ background:#25D366;
 
 </body>
 </html>
+
 
 
 

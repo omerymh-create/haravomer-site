@@ -57,50 +57,83 @@ font-size:16px;
 .contact-btn.whatsapp{
 background:#25D366;
 }
-/* WhatsApp testimonials */
+/* WhatsApp phone layout */
 
 .wa-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:28px;
 margin-top:30px;
 }
 
-.wa-chat{
-background:#e5ddd5;
-padding:20px;
-border-radius:15px;
-display:flex;
-justify-content:flex-end;
-direction:rtl;
+.wa-phone{
+border-radius:26px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+background:#111;
 }
 
-.wa-bubble{
-background:#ffffff;
-padding:16px 18px;
-border-radius:14px;
-max-width:100%;
+.wa-topbar{
+background:#111;
+color:white;
+padding:14px 16px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-weight:700;
+}
+
+.wa-top-icons{
+font-size:14px;
+opacity:.8;
+}
+
+.wa-top-title{
 font-size:16px;
-line-height:1.6;
-text-align:right;
-box-shadow:0 2px 5px rgba(0,0,0,0.15);
+}
+
+.wa-screen{
+background:#e5ddd5;
+padding:16px;
+min-height:260px;
+display:flex;
+justify-content:flex-end;
+align-items:flex-start;
+}
+
+.wa-screen.dark{
+background:#0f141a;
+}
+
+.wa-msg{
+background:white;
+padding:16px 18px 12px;
+border-radius:18px 18px 6px 18px;
+max-width:100%;
+font-size:18px;
+line-height:1.7;
+box-shadow:0 2px 8px rgba(0,0,0,0.15);
 position:relative;
 }
 
-.wa-bubble:after{
+.wa-msg::after{
 content:"";
 position:absolute;
-right:-8px;
-top:10px;
-border-width:8px;
-border-style:solid;
-border-color:transparent transparent transparent #ffffff;
+top:0;
+right:-10px;
+border-top:12px solid white;
+border-left:12px solid transparent;
+}
+
+.wa-text{
+white-space:normal;
+text-align:right;
 }
 
 .wa-time{
-font-size:12px;
+margin-top:10px;
+font-size:13px;
 color:#888;
-margin-top:6px;
 text-align:left;
 }
 </style>
@@ -327,6 +360,7 @@ text-align:left;
 
 </body>
 </html>
+
 
 
 

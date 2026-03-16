@@ -219,6 +219,7 @@ p{
   overflow:hidden;
   background:#1b2432;
   box-shadow:0 22px 50px rgba(0,0,0,0.20);
+  touch-action:pan-y;
 }
 
 .showcase-bg{
@@ -256,6 +257,8 @@ p{
   justify-content:center;
   align-items:center;
   gap:34px;
+  transition:transform .25s ease;
+  will-change:transform;
 }
 
 .showcase-card{
@@ -800,6 +803,7 @@ p{
 
 .showcase-track{
   gap:8px;
+  transition:transform .2s ease;
 }
 
 .showcase-card{
@@ -1092,32 +1096,52 @@ nextBtn.addEventListener("click", function(){
   updateGallery();
 });
 let startX = 0;
-let endX = 0;
+let currentX = 0;
+let isDragging = false;
 
 const showcase = document.querySelector(".showcase");
+const showcaseTrack = document.querySelector(".showcase-track");
 
 showcase.addEventListener("touchstart", function(e){
-  startX = e.changedTouches[0].screenX;
+  startX = e.touches[0].clientX;
+  currentX = startX;
+  isDragging = true;
+  showcaseTrack.style.transition = "none";
 });
 
-showcase.addEventListener("touchend", function(e){
-  endX = e.changedTouches[0].screenX;
-  handleSwipe();
+showcase.addEventListener("touchmove", function(e){
+  if(!isDragging) return;
+
+  currentX = e.touches[0].clientX;
+  const diff = currentX - startX;
+
+  showcaseTrack.style.transform = `translateX(${diff}px)`;
 });
 
-function handleSwipe(){
-  const diff = startX - endX;
+showcase.addEventListener("touchend", function(){
+  if(!isDragging) return;
 
-  if(diff > 50){
+  isDragging = false;
+  const diff = currentX - startX;
+
+  showcaseTrack.style.transition = "transform .25s ease";
+
+  if(diff < -60){
     currentIndex = (currentIndex + 1) % galleryImages.length;
     updateGallery();
-  }
-
-  if(diff < -50){
+  } else if(diff > 60){
     currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
     updateGallery();
   }
-}
+
+  showcaseTrack.style.transform = "translateX(0)";
+});
+
+showcase.addEventListener("touchcancel", function(){
+  isDragging = false;
+  showcaseTrack.style.transition = "transform .25s ease";
+  showcaseTrack.style.transform = "translateX(0)";
+});
 updateGallery();
 </script>
 

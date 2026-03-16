@@ -1,62 +1,57 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>הרב עומר דודוביץ – שיעורים ושיחות</title>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#f6f2ea;
-  --card:#ffffff;
-  --text:#1f2937;
-  --muted:#4b5563;
-  --line:#e8e1d6;
+  --text:#172033;
+  --muted:#475569;
   --accent:#8a6a2f;
+  --line:#e7ddd0;
   --dark:#111827;
+  --bg1:#f7f3ec;
+  --bg2:#efe8dc;
+  --card:#ffffff;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 html{
   scroll-behavior:smooth;
 }
 
 body{
-  font-family:'Heebo', Arial, sans-serif;
-  background:linear-gradient(180deg,#faf7f1 0%,#f6f2ea 100%);
   margin:0;
+  font-family:'Heebo',sans-serif;
+  background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 100%);
   color:var(--text);
 }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:30px 20px 60px;
-}
-
 h1{
-  font-size:56px;
-  margin:0 0 14px;
-  line-height:1.08;
+  font-size:66px;
+  margin:0 0 18px;
+  line-height:1.05;
+  letter-spacing:-0.8px;
 }
 
 h2{
-  font-size:38px;
+  font-size:44px;
   margin:0 0 12px;
   line-height:1.1;
 }
 
 h3{
-  line-height:1.25;
+  margin:0;
+  line-height:1.2;
 }
 
 p{
-  line-height:1.8;
-  font-size:18px;
+  font-size:20px;
+  line-height:1.85;
   margin:0;
 }
 
@@ -68,112 +63,101 @@ p{
   max-width:1100px;
   margin-right:auto;
   margin-left:auto;
+  width:calc(100% - 40px);
 }
 
 .hero{
   display:grid;
   grid-template-columns:1.05fr 0.95fr;
-  gap:44px;
+  gap:40px;
   align-items:center;
-  background:rgba(255,255,255,0.82);
-  border:1px solid rgba(232,225,214,0.95);
-  padding:30px;
-  border-radius:30px;
-  box-shadow:0 18px 40px rgba(17,24,39,0.06);
-  backdrop-filter:blur(8px);
+  padding:42px;
+  border-radius:34px;
   margin-top:30px;
-  margin-bottom:88px;
-  width:calc(100% - 40px);
+  margin-bottom:80px;
+  background:
+    radial-gradient(circle at top right,#cbb28a 0%,transparent 45%),
+    radial-gradient(circle at bottom left,#e8dcc7 0%,transparent 50%),
+    linear-gradient(135deg,#2b3240 0%,#1c2433 100%);
+  color:white;
+  box-shadow:0 24px 50px rgba(0,0,0,0.25);
 }
 
-.hero-copy{
-  min-width:0;
+.hero-copy p{
+  color:rgba(255,255,255,0.9);
 }
 
 .eyebrow{
   font-size:15px;
   font-weight:700;
-  color:var(--accent);
+  color:#f2dfb1;
   margin-bottom:14px;
-}
-
-.hero-copy > p:not(.eyebrow){
-  color:var(--muted);
 }
 
 .hero-actions{
   display:flex;
   gap:14px;
   flex-wrap:wrap;
-  margin-top:22px;
+  margin-top:24px;
 }
 
 .btn{
   display:inline-block;
-  background:var(--dark);
-  color:#fff;
-  padding:16px 28px;
+  background:white;
+  color:#111827;
+  padding:15px 28px;
   border-radius:14px;
   text-decoration:none;
   font-weight:800;
-  box-shadow:0 14px 28px rgba(17,24,39,0.12);
-  transition:transform .15s ease, opacity .15s ease;
+  transition:.2s;
 }
 
 .btn:hover{
-  transform:translateY(-1px);
-  opacity:.95;
+  transform:translateY(-2px);
 }
 
 .btn.secondary{
-  background:#fff;
-  color:var(--dark);
-  border:1px solid var(--line);
-  box-shadow:none;
+  background:rgba(255,255,255,0.15);
+  color:white;
+  border:1px solid rgba(255,255,255,0.25);
 }
 
 .hero-points{
   display:grid;
-  grid-template-columns:repeat(3, minmax(0, 1fr));
+  grid-template-columns:repeat(3,1fr);
   gap:14px;
   margin-top:26px;
 }
 
 .point{
-  background:rgba(255,255,255,0.88);
-  border:1px solid var(--line);
+  background:rgba(255,255,255,0.12);
   border-radius:18px;
-  padding:14px 16px;
-  box-shadow:0 8px 18px rgba(17,24,39,0.04);
+  padding:14px;
 }
 
 .point strong{
   display:block;
-  font-size:17px;
-  margin-bottom:6px;
+  margin-bottom:4px;
+  color:white;
 }
 
 .point span{
-  display:block;
-  color:var(--muted);
-  font-size:15px;
+  color:rgba(255,255,255,0.9);
+  font-size:16px;
   line-height:1.7;
 }
 
 .hero-media-card{
-  background:rgba(255,255,255,0.9);
-  border:1px solid var(--line);
-  border-radius:28px;
+  background:rgba(255,255,255,0.93);
   padding:14px;
-  box-shadow:0 18px 34px rgba(17,24,39,0.08);
+  border-radius:28px;
+  box-shadow:0 18px 34px rgba(0,0,0,0.16);
 }
 
 .hero img{
   width:100%;
-  border-radius:22px;
   display:block;
-  box-shadow:0 18px 34px rgba(17,24,39,0.12);
-  background:#ece3d6;
+  border-radius:22px;
 }
 
 .image-caption{
@@ -181,68 +165,82 @@ p{
 }
 
 .image-caption .title{
-  font-size:22px;
+  font-size:24px;
   font-weight:800;
+  color:var(--text);
   margin-bottom:4px;
 }
 
 .image-caption .sub{
-  font-size:15px;
+  font-size:16px;
   color:var(--muted);
 }
 
 .section{
-  margin-top:88px;
-  width:calc(100% - 40px);
+  margin-top:80px;
 }
 
 .section-head{
-  margin-bottom:26px;
+  text-align:center;
+  margin-bottom:28px;
 }
 
 .section-head p{
   color:var(--muted);
+  font-size:22px;
 }
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(3, minmax(0, 1fr));
-  gap:22px;
-  margin-top:30px;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
 }
 
 .card{
-  background:rgba(255,255,255,0.92);
-  padding:26px;
-  border-radius:22px;
-  box-shadow:0 12px 28px rgba(17,24,39,0.05);
-  border:1px solid rgba(232,225,214,0.95);
+  background:var(--card);
+  padding:34px 30px;
+  border-radius:26px;
+  border:1px solid var(--line);
+  box-shadow:0 12px 28px rgba(0,0,0,0.05);
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 36px rgba(0,0,0,0.08);
 }
 
 .card h3{
-margin:0 0 14px;
-font-size:30px;
-font-weight:800;
+  font-size:30px;
+  margin-bottom:12px;
+  position:relative;
+  padding-bottom:12px;
+}
+
+.card h3::after{
+  content:"";
+  display:block;
+  width:56px;
+  height:4px;
+  border-radius:999px;
+  background:var(--accent);
+  margin-top:10px;
 }
 
 .card p{
-margin:0;
-color:var(--muted);
-font-size:22px;
-line-height:1.85;
+  font-size:22px;
+  color:var(--muted);
+  line-height:1.9;
 }
 
 .testimonials-whatsapp{
-  margin-top:88px;
-  width:calc(100% - 40px);
+  margin-top:80px;
 }
 
 .wa-grid{
   display:grid;
-  grid-template-columns:repeat(3, minmax(0, 1fr));
+  grid-template-columns:repeat(3,1fr);
   gap:28px;
-  margin-top:30px;
-  align-items:start;
 }
 
 .wa-phone{
@@ -251,7 +249,12 @@ line-height:1.85;
   box-shadow:0 10px 30px rgba(0,0,0,0.15);
   background:#efeae2 url("whatsapp-bg.png") repeat;
   background-size:350px;
-  min-width:0;
+  transition:.2s;
+}
+
+.wa-phone:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 36px rgba(0,0,0,0.18);
 }
 
 .wa-topbar{
@@ -275,7 +278,6 @@ line-height:1.85;
 }
 
 .wa-screen{
-  background:transparent;
   padding:16px;
   display:flex;
   justify-content:flex-end;
@@ -284,19 +286,17 @@ line-height:1.85;
 }
 
 .wa-msg{
-  background:#ffffff;
+  background:white;
   padding:16px 18px 12px;
   border-radius:12px 12px 4px 12px;
   max-width:88%;
   font-size:18px;
-  line-height:1.7;
+  line-height:1.75;
   box-shadow:0 1px 2px rgba(0,0,0,0.14);
-  position:relative;
   margin:12px;
 }
 
 .wa-text{
-  white-space:normal;
   text-align:right;
 }
 
@@ -308,23 +308,22 @@ line-height:1.85;
 }
 
 .cta-box{
-  margin-top:88px;
-  margin-bottom:88px;
-  width:calc(100% - 40px);
-  background:rgba(255,255,255,0.9);
-  border:1px solid var(--line);
-  border-radius:28px;
-  padding:28px 30px;
+  margin-top:80px;
+  margin-bottom:80px;
+  background:white;
+  border-radius:30px;
+  padding:32px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   gap:20px;
-  box-shadow:0 12px 28px rgba(17,24,39,0.05);
+  border:1px solid var(--line);
+  box-shadow:0 12px 28px rgba(0,0,0,0.05);
 }
 
 .cta-box h3{
-  margin:0 0 8px;
-  font-size:28px;
+  font-size:32px;
+  margin-bottom:8px;
 }
 
 .cta-box p{
@@ -332,14 +331,12 @@ line-height:1.85;
 }
 
 .footer{
-  text-align:center;
-  margin-top:88px;
+  margin-top:80px;
   margin-bottom:40px;
-  padding:42px 20px;
-  background:linear-gradient(180deg,#f1ebe2 0%,#eee6db 100%);
-  border-top:1px solid #ddd;
+  text-align:center;
+  background:linear-gradient(180deg,#f1ebe2,#eee6db);
+  padding:42px;
   border-radius:24px;
-  width:calc(100% - 40px);
 }
 
 .contact-buttons{
@@ -357,18 +354,21 @@ line-height:1.85;
   border-radius:30px;
   text-decoration:none;
   font-weight:bold;
-  font-size:16px;
+  transition:.2s;
+}
+
+.contact-btn:hover{
+  transform:translateY(-2px);
 }
 
 .contact-btn.whatsapp{
   background:#25D366;
 }
 
-@media (max-width: 980px){
+@media (max-width:980px){
   .hero{
     grid-template-columns:1fr;
-    gap:26px;
-    padding:24px;
+    padding:28px;
   }
 
   .hero-points{
@@ -376,11 +376,11 @@ line-height:1.85;
   }
 
   .cards{
-    grid-template-columns:repeat(2, minmax(0, 1fr));
+    grid-template-columns:repeat(2,1fr);
   }
 
   .wa-grid{
-    grid-template-columns:repeat(2, minmax(0, 1fr));
+    grid-template-columns:repeat(2,1fr);
   }
 
   .cta-box{
@@ -389,34 +389,21 @@ line-height:1.85;
   }
 
   h1{
-    font-size:42px;
+    font-size:46px;
   }
 
   h2{
-    font-size:32px;
+    font-size:36px;
   }
 }
 
-@media (max-width: 640px){
+@media (max-width:640px){
   .hero,
   .section,
   .testimonials-whatsapp,
   .cta-box,
   .footer{
     width:calc(100% - 24px);
-  }
-
-  .hero{
-    padding:20px;
-    margin-top:12px;
-    margin-bottom:64px;
-  }
-
-  .section,
-  .testimonials-whatsapp,
-  .cta-box,
-  .footer{
-    margin-top:64px;
   }
 
   .cards{
@@ -427,16 +414,8 @@ line-height:1.85;
     grid-template-columns:1fr;
   }
 
-  h1{
-    font-size:34px;
-  }
-
-  h2{
-    font-size:28px;
-  }
-
-  p{
-    font-size:17px;
+  .hero-actions{
+    flex-direction:column;
   }
 
   .btn,
@@ -445,8 +424,24 @@ line-height:1.85;
     text-align:center;
   }
 
-  .hero-actions{
-    flex-direction:column;
+  h1{
+    font-size:36px;
+  }
+
+  h2{
+    font-size:30px;
+  }
+
+  p{
+    font-size:18px;
+  }
+
+  .card h3{
+    font-size:26px;
+  }
+
+  .card p{
+    font-size:19px;
   }
 }
 </style>
@@ -475,10 +470,8 @@ line-height:1.85;
       <div class="hero-media-card">
         <img src="עומר פורפיל חדש.png" alt="הרב עומר דודוביץ">
         <div class="image-caption">
-          <div>
-            <div class="title">הרב עומר דודוביץ</div>
-            <div class="sub">שיעורים, שיחות והרצאות למוסדות חינוך ולנוער</div>
-          </div>
+          <div class="title">הרב עומר דודוביץ</div>
+          <div class="sub">שיעורים, שיחות והרצאות למוסדות חינוך ולנוער</div>
         </div>
       </div>
     </div>
@@ -486,10 +479,8 @@ line-height:1.85;
 
   <div class="section" id="topics">
     <div class="section-head">
-      <div>
-        <h2>נושאים לשיעורים</h2>
-        <p>אפשר להזמין שיעור חד־פעמי, סדרת מפגשים, ערב חיזוק או נושא מותאם במיוחד לקהל.</p>
-      </div>
+      <h2>נושאים לשיעורים</h2>
+      <p>אפשר להזמין שיעור חד־פעמי, סדרת מפגשים, ערב חיזוק או נושא מותאם במיוחד לקהל.</p>
     </div>
 
     <div class="cards">
@@ -637,7 +628,6 @@ line-height:1.85;
 
   <div class="footer">
     <h2>יצירת קשר</h2>
-
     <div class="contact-buttons">
       <a class="contact-btn" href="tel:0506514877">📞 טלפון</a>
       <a class="contact-btn" href="mailto:omerymh@gmail.com">✉️ אימייל</a>

@@ -4,7 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>הרב עומר דודוביץ – שיעורים ושיחות</title>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet"><style>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
 :root{
   --bg:#f6f2ea;
   --card:#ffffff;
@@ -14,117 +16,435 @@
   --accent:#8a6a2f;
   --dark:#111827;
 }
-*{box-sizing:border-box}
-body{font-family:Assistant,Arial;background:linear-gradient(180deg,#faf7f1 0%,#f6f2ea 100%);margin:0;color:var(--text)}
-.container{max-width:1180px;margin:auto;padding:30px 20px 60px}
-h1{font-size:56px;margin:0 0 14px;line-height:1.02}
-h2{font-size:38px;margin-bottom:12px;line-height:1.1}
-p{line-height:1.8;font-size:18px}
-.hero{display:grid;grid-template-columns:1.05fr 0.95fr;gap:52px;align-items:center;background:rgba(255,255,255,0.82);border:1px solid rgba(232,225,214,0.95);padding:34px;border-radius:30px;box-shadow:0 18px 40px rgba(17,24,39,0.06);backdrop-filter:blur(8px)}
-.hero img{width:100%;border-radius:26px;display:block;box-shadow:0 18px 34px rgba(17,24,39,0.12);background:#ece3d6}
-.btn{display:inline-block;background:var(--dark);color:#fff;padding:16px 28px;border-radius:14px;text-decoration:none;margin-top:22px;font-weight:800;box-shadow:0 14px 28px rgba(17,24,39,0.12)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:30px}
-.card{background:rgba(255,255,255,0.92);padding:26px;border-radius:22px;box-shadow:0 12px 28px rgba(17,24,39,0.05);border:1px solid rgba(232,225,214,0.95)}
-.card h3{margin:0 0 10px;font-size:24px}
-.card p{margin:0;color:var(--muted)}
-.section{margin-top:88px}
-.testimonial{font-style:normal;position:relative;overflow:hidden}
-.testimonial::before{content:"״";position:absolute;left:18px;top:10px;font-size:54px;color:#eadfce;font-weight:800;line-height:1}
-.footer{text-align:center;margin-top:88px;padding:42px;background:linear-gradient(180deg,#f1ebe2 0%,#eee6db 100%);border-top:1px solid #ddd;border-radius:24px}
-@media(max-:800px){.hero{grid-template-columns:1fr;gap:26px;padding:22px}h1{font-size:40px}.container{padding:20px 14px 40px}}
-  .footer{text-align:center;margin-top:88px;padding:42px;background:linear-gradient(180deg,#f1ebe2 0%,#eee6db 100%);border-top:1px solid #ddd;border-radius:24px}
-@media(max-:800px){.hero{grid-template-columns:1fr;gap:26px;padding:22px}h1{font-size:40px}.container{padding:20px 14px 40px}}
 
-.contact-buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-margin-top:25px;
-flex-wrap:wrap;
+*{
+  box-sizing:border-box;
 }
 
-.contact-btn{
-background:#222;
-color:white;
-padding:14px 26px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-font-size:16px;
+html{
+  scroll-behavior:smooth;
 }
 
-.contact-btn.whatsapp{
-background:#25D366;
+body{
+  font-family:'Heebo', Arial, sans-serif;
+  background:linear-gradient(180deg,#faf7f1 0%,#f6f2ea 100%);
+  margin:0;
+  color:var(--text);
 }
-/* WhatsApp phone layout */
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:30px 20px 60px;
+}
+
+h1{
+  font-size:56px;
+  margin:0 0 14px;
+  line-height:1.08;
+}
+
+h2{
+  font-size:38px;
+  margin:0 0 12px;
+  line-height:1.1;
+}
+
+h3{
+  line-height:1.25;
+}
+
+p{
+  line-height:1.8;
+  font-size:18px;
+  margin:0;
+}
+
+.hero,
+.section,
+.testimonials-whatsapp,
+.cta-box,
+.footer{
+  max-width:1100px;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:1.05fr 0.95fr;
+  gap:44px;
+  align-items:center;
+  background:rgba(255,255,255,0.82);
+  border:1px solid rgba(232,225,214,0.95);
+  padding:30px;
+  border-radius:30px;
+  box-shadow:0 18px 40px rgba(17,24,39,0.06);
+  backdrop-filter:blur(8px);
+  margin-top:30px;
+  margin-bottom:88px;
+  width:calc(100% - 40px);
+}
+
+.hero-copy{
+  min-width:0;
+}
+
+.eyebrow{
+  font-size:15px;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:14px;
+}
+
+.hero-copy > p:not(.eyebrow){
+  color:var(--muted);
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--dark);
+  color:#fff;
+  padding:16px 28px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 14px 28px rgba(17,24,39,0.12);
+  transition:transform .15s ease, opacity .15s ease;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+  opacity:.95;
+}
+
+.btn.secondary{
+  background:#fff;
+  color:var(--dark);
+  border:1px solid var(--line);
+  box-shadow:none;
+}
+
+.hero-points{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:14px;
+  margin-top:26px;
+}
+
+.point{
+  background:rgba(255,255,255,0.88);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:14px 16px;
+  box-shadow:0 8px 18px rgba(17,24,39,0.04);
+}
+
+.point strong{
+  display:block;
+  font-size:17px;
+  margin-bottom:6px;
+}
+
+.point span{
+  display:block;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.7;
+}
+
+.hero-media-card{
+  background:rgba(255,255,255,0.9);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:14px;
+  box-shadow:0 18px 34px rgba(17,24,39,0.08);
+}
+
+.hero img{
+  width:100%;
+  border-radius:22px;
+  display:block;
+  box-shadow:0 18px 34px rgba(17,24,39,0.12);
+  background:#ece3d6;
+}
+
+.image-caption{
+  padding:14px 8px 4px;
+}
+
+.image-caption .title{
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:4px;
+}
+
+.image-caption .sub{
+  font-size:15px;
+  color:var(--muted);
+}
+
+.section{
+  margin-top:88px;
+  width:calc(100% - 40px);
+}
+
+.section-head{
+  margin-bottom:26px;
+}
+
+.section-head p{
+  color:var(--muted);
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:22px;
+  margin-top:30px;
+}
+
+.card{
+  background:rgba(255,255,255,0.92);
+  padding:26px;
+  border-radius:22px;
+  box-shadow:0 12px 28px rgba(17,24,39,0.05);
+  border:1px solid rgba(232,225,214,0.95);
+}
+
+.card h3{
+  margin:0 0 10px;
+  font-size:24px;
+}
+
+.card p{
+  margin:0;
+  color:var(--muted);
+}
+
+.testimonials-whatsapp{
+  margin-top:88px;
+  width:calc(100% - 40px);
+}
 
 .wa-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:28px;
-margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:28px;
+  margin-top:30px;
+  align-items:start;
 }
 
 .wa-phone{
-border-radius:26px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
-background:#efeae2 url("whatsapp-bg.png") repeat;
-background-size:350px;
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  background:#efeae2 url("whatsapp-bg.png") repeat;
+  background-size:350px;
+  min-width:0;
 }
 
 .wa-topbar{
-background:#075E54;
-color:white;
-padding:14px 16px;
-display:flex;
-flex-direction:row-reverse;
-justify-content:space-between;
-align-items:center;
-font-weight:700;
+  background:#075E54;
+  color:white;
+  padding:14px 16px;
+  display:flex;
+  flex-direction:row-reverse;
+  justify-content:space-between;
+  align-items:center;
+  font-weight:700;
 }
 
 .wa-top-icons{
-font-size:14px;
-opacity:.8;
+  font-size:14px;
+  opacity:.8;
 }
 
 .wa-top-title{
-font-size:16px;
+  font-size:16px;
 }
 
 .wa-screen{
-background:transparent;
-padding:16px;
-display:flex;
-justify-content:flex-end;
-align-items:flex-start;
-min-height:260px;
+  background:transparent;
+  padding:16px;
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-start;
+  min-height:260px;
 }
 
 .wa-msg{
-background:#ffffff;
-padding:16px 18px 12px;
-border-radius:12px 12px 4px 12px;
-max-width:88%;
-font-size:18px;
-line-height:1.7;
-box-shadow:0 1px 2px rgba(0,0,0,0.14);
-position:relative;
-margin:12px;
+  background:#ffffff;
+  padding:16px 18px 12px;
+  border-radius:12px 12px 4px 12px;
+  max-width:88%;
+  font-size:18px;
+  line-height:1.7;
+  box-shadow:0 1px 2px rgba(0,0,0,0.14);
+  position:relative;
+  margin:12px;
 }
 
-
 .wa-text{
-white-space:normal;
-text-align:right;
+  white-space:normal;
+  text-align:right;
 }
 
 .wa-time{
-margin-top:10px;
-font-size:13px;
-color:#888;
-text-align:left;
+  margin-top:10px;
+  font-size:13px;
+  color:#888;
+  text-align:left;
+}
+
+.cta-box{
+  margin-top:88px;
+  margin-bottom:88px;
+  width:calc(100% - 40px);
+  background:rgba(255,255,255,0.9);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:28px 30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  box-shadow:0 12px 28px rgba(17,24,39,0.05);
+}
+
+.cta-box h3{
+  margin:0 0 8px;
+  font-size:28px;
+}
+
+.cta-box p{
+  color:var(--muted);
+}
+
+.footer{
+  text-align:center;
+  margin-top:88px;
+  margin-bottom:40px;
+  padding:42px 20px;
+  background:linear-gradient(180deg,#f1ebe2 0%,#eee6db 100%);
+  border-top:1px solid #ddd;
+  border-radius:24px;
+  width:calc(100% - 40px);
+}
+
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-top:25px;
+  flex-wrap:wrap;
+}
+
+.contact-btn{
+  background:#222;
+  color:white;
+  padding:14px 26px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.contact-btn.whatsapp{
+  background:#25D366;
+}
+
+@media (max-width: 980px){
+  .hero{
+    grid-template-columns:1fr;
+    gap:26px;
+    padding:24px;
+  }
+
+  .hero-points{
+    grid-template-columns:1fr;
+  }
+
+  .cards{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+
+  .wa-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+
+  .cta-box{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  h1{
+    font-size:42px;
+  }
+
+  h2{
+    font-size:32px;
+  }
+}
+
+@media (max-width: 640px){
+  .hero,
+  .section,
+  .testimonials-whatsapp,
+  .cta-box,
+  .footer{
+    width:calc(100% - 24px);
+  }
+
+  .hero{
+    padding:20px;
+    margin-top:12px;
+    margin-bottom:64px;
+  }
+
+  .section,
+  .testimonials-whatsapp,
+  .cta-box,
+  .footer{
+    margin-top:64px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .wa-grid{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    font-size:34px;
+  }
+
+  h2{
+    font-size:28px;
+  }
+
+  p{
+    font-size:17px;
+  }
+
+  .btn,
+  .contact-btn{
+    width:100%;
+    text-align:center;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+  }
 }
 </style>
 </head>
@@ -135,16 +455,16 @@ text-align:left;
       <p class="eyebrow">הרב עומר דודוביץ • שיעורים למוסדות חינוך, מדרשות, ישיבות וקהילות</p>
       <h1>תורה עמוקה שמדברת אל החיים</h1>
       <p>שיעורים, שיחות והרצאות שנמסרים מתוך עומק תורני, בהירות מחשבתית, חיבור לעולם הנפש ולשאלות של הדור — באופן חי, נוגע ומשמעותי.</p>
+
       <div class="hero-actions">
         <a class="btn" href="https://wa.me/972506514877">לתיאום שיעור</a>
         <a class="btn secondary" href="#topics">לנושאים לשיעורים</a>
       </div>
-<br>
-      
+
       <div class="hero-points">
-        <div class="point"><strong>עומק</strong><span> מקורות, מחשבה, תורת הרב קוק ושאלות היסוד באמונה .</span></div>
-        <div class="point"><strong>חיבור</strong><span> מפגש אמיתי עם עולמם של תלמידים, בוגרים וצוותים חינוכיים .</span></div>
-        <div class="point"><strong>השפעה</strong><span> שיעור שנוגע בזמן אמת וממשיך ללוות גם אחר כך .</span></div>
+        <div class="point"><strong>עומק</strong><span>מקורות, מחשבה, תורת הרב קוק ושאלות היסוד באמונה.</span></div>
+        <div class="point"><strong>חיבור</strong><span>מפגש אמיתי עם עולמם של תלמידים, בוגרים וצוותים חינוכיים.</span></div>
+        <div class="point"><strong>השפעה</strong><span>שיעור שנוגע בזמן אמת וממשיך ללוות גם אחר כך.</span></div>
       </div>
     </div>
 
@@ -168,6 +488,7 @@ text-align:left;
         <p>אפשר להזמין שיעור חד־פעמי, סדרת מפגשים, ערב חיזוק או נושא מותאם במיוחד לקהל.</p>
       </div>
     </div>
+
     <div class="cards">
       <div class="card"><h3>בניין האישיות</h3><p>איך להתמודד עם קנאה, כעס ועצלנות ולבנות אישיות חזקה, מאירה ובריאה.</p></div>
       <div class="card"><h3>תורת הרב קוק</h3><p>עומק תפיסת הגאולה והחזון של עם ישראל, תורת ישראל וארץ ישראל.</p></div>
@@ -178,130 +499,130 @@ text-align:left;
     </div>
   </div>
 
-   <section class="testimonials-whatsapp">
-  <div class="section-head">
-    <h2>משובים מתלמידות</h2>
-    <p>כמה תגובות נבחרות מתוך משובים שנשלחו אחרי שיעורים ושיחות.</p>
-  </div>
-
-  <div class="wa-grid">
-
-    <div class="wa-phone">
-      <div class="wa-topbar">
-        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-        <div class="wa-top-title">יעל מכון אורה</div>
-      </div>
-      <div class="wa-screen">
-        <div class="wa-msg">
-          <div class="wa-text">
-            כן נכון<br>
-            יש פעמים שאני מגיעה למדרשה במיוחד לשיעורים האלו, וכולנו נהנות מאוד מאוד מהשיעורים.<br>
-            כל שיעור שהרב מעביר עוצמתי במפגש שלו בחיי היום יום, ואצלי אישית מתחיל ביישום עוד בזמן השיעור!<br>
-            תודה רבה
-          </div>
-          <div class="wa-time">23:07</div>
-        </div>
-      </div>
+  <section class="testimonials-whatsapp">
+    <div class="section-head">
+      <h2>משובים מתלמידות</h2>
+      <p>כמה תגובות נבחרות מתוך משובים שנשלחו אחרי שיעורים ושיחות.</p>
     </div>
 
-    <div class="wa-phone">
-      <div class="wa-topbar">
-        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-        <div class="wa-top-title">רנן רכזת תורה נוער אלקנה</div>
-      </div>
-      <div class="wa-screen dark">
-        <div class="wa-msg dark-bubble">
-          <div class="wa-text">
-            ערב טוב הרב,<br>
-            רציתי להגיד תודה רבה על השיעור שהרב העביר. זה היה ממש מעמיק, נוגע ומחובר לעולם של הנוער.<br>
-            הרגשתי שיש מקום לשאלות, למחשבות, ולא רק לשמוע אלא גם להתחבר באמת למה שנאמר.<br><br>
-            הרבה נערים ונערות יצאו מהשיעור עם נקודות למחשבה, והיה אפשר לראות שזה נגע בהם.<br>
-            זה לא מובן מאליו, וזה לגמרי השאיר חותם.<br><br>
-            מקווה שתהיה עוד הזדמנות לשיעורים כאלה!<br><br>
-            תודה גדולה הרב!
+    <div class="wa-grid">
+
+      <div class="wa-phone">
+        <div class="wa-topbar">
+          <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
+          <div class="wa-top-title">יעל מכון אורה</div>
+        </div>
+        <div class="wa-screen">
+          <div class="wa-msg">
+            <div class="wa-text">
+              כן נכון<br>
+              יש פעמים שאני מגיעה למדרשה במיוחד לשיעורים האלו, וכולנו נהנות מאוד מאוד מהשיעורים.<br>
+              כל שיעור שהרב מעביר עוצמתי במפגש שלו בחיי היום יום, ואצלי אישית מתחיל ביישום עוד בזמן השיעור!<br>
+              תודה רבה
+            </div>
+            <div class="wa-time">23:07</div>
           </div>
-          <div class="wa-time">20:45</div>
         </div>
       </div>
-    </div>
 
-    <div class="wa-phone">
-      <div class="wa-topbar">
-        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-        <div class="wa-top-title">שירה קומונרית סניף אשדוד</div>
-      </div>
-      <div class="wa-screen dark">
-        <div class="wa-msg dark-bubble">
-          <div class="wa-text">
-            ב"ה היה שיעור מוצלח מאוד,<br>
-            לאחר השיעור הייתי בשיחה אישית עם אחת המדריכות שהייתה בו,<br>
-            והיא סיפרה על רעיונות לקשר אישי שהיא קיבלה מהשיעור של הרב,<br>
-            תודה רבה!!
+      <div class="wa-phone">
+        <div class="wa-topbar">
+          <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
+          <div class="wa-top-title">רנן רכזת תורה נוער אלקנה</div>
+        </div>
+        <div class="wa-screen">
+          <div class="wa-msg">
+            <div class="wa-text">
+              ערב טוב הרב,<br>
+              רציתי להגיד תודה רבה על השיעור שהרב העביר. זה היה ממש מעמיק, נוגע ומחובר לעולם של הנוער.<br>
+              הרגשתי שיש מקום לשאלות, למחשבות, ולא רק לשמוע אלא גם להתחבר באמת למה שנאמר.<br><br>
+              הרבה נערים ונערות יצאו מהשיעור עם נקודות למחשבה, והיה אפשר לראות שזה נגע בהם.<br>
+              זה לא מובן מאליו, וזה לגמרי השאיר חותם.<br><br>
+              מקווה שתהיה עוד הזדמנות לשיעורים כאלה!<br><br>
+              תודה גדולה הרב!
+            </div>
+            <div class="wa-time">20:45</div>
           </div>
-          <div class="wa-time">21:18</div>
         </div>
       </div>
-    </div>
 
-    <div class="wa-phone">
-      <div class="wa-topbar">
-        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-        <div class="wa-top-title">תלמידה מדרשת שלהבת הנשמה</div>
-      </div>
-      <div class="wa-screen">
-        <div class="wa-msg">
-          <div class="wa-text">
-            הרב אני זוכרת ממש לטובה את השיעור של פורים שעבר<br>
-            זה היה השיעור הראשון שלי במדרשה<br>
-            שמעתי אותו אחר כך ארבע פעמים.<br>
-            אשריכם ישראל
+      <div class="wa-phone">
+        <div class="wa-topbar">
+          <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
+          <div class="wa-top-title">שירה קומונרית סניף אשדוד</div>
+        </div>
+        <div class="wa-screen">
+          <div class="wa-msg">
+            <div class="wa-text">
+              ב"ה היה שיעור מוצלח מאוד,<br>
+              לאחר השיעור הייתי בשיחה אישית עם אחת המדריכות שהייתה בו,<br>
+              והיא סיפרה על רעיונות לקשר אישי שהיא קיבלה מהשיעור של הרב,<br>
+              תודה רבה!!
+            </div>
+            <div class="wa-time">21:18</div>
           </div>
-          <div class="wa-time">20:33</div>
         </div>
       </div>
-    </div>
 
-  <div class="wa-phone">
-      <div class="wa-topbar">
-        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-        <div class="wa-top-title">שרה מכון אורה</div>
-      </div>
-      <div class="wa-screen">
-        <div class="wa-msg">
-          <div class="wa-text">
-            היי זאת שרה מהתכנית של הבנות שירות רציתי להודות לך על כל השיעורים!!<br>
-            כל שבוע חיכיתי לשיעורים שלך וזה נתן לי כח וחיזק אותי לכל השבוע ולכל החיים!!<br>
-            תמיד שאלת שאלות ממש טובות וכל פעם נתת תשובות שהיו חדשות בשבילי והתשובות היו אפילו יותר טובות מהשאלות אז שוב תודה רבה אני ממש מעריכה:)
+      <div class="wa-phone">
+        <div class="wa-topbar">
+          <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
+          <div class="wa-top-title">תלמידה מדרשת שלהבת הנשמה</div>
+        </div>
+        <div class="wa-screen">
+          <div class="wa-msg">
+            <div class="wa-text">
+              הרב אני זוכרת ממש לטובה את השיעור של פורים שעבר<br>
+              זה היה השיעור הראשון שלי במדרשה<br>
+              שמעתי אותו אחר כך ארבע פעמים.<br>
+              אשריכם ישראל
+            </div>
+            <div class="wa-time">20:33</div>
           </div>
-          <div class="wa-time">20:33</div>
         </div>
       </div>
-    </div>
 
-    <div class="wa-phone">
-      <div class="wa-topbar">
-        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-        <div class="wa-top-title">בת חן מדרשת אורות אביטל ברחובות</div>
-      </div>
-      <div class="wa-screen dark">
-        <div class="wa-msg dark-bubble">
-          <div class="wa-text">
-            שלום הרב עומר,<br>
-            אשמח לשתף ולהודות על השיעורים במהלך השנתיים האחרונות.<br>
-            השיעורים של הרב תמיד גורמים לי לעצור ולחשוב, לפעמים להעמיק ולקבל זווית ראייה חדשה על נושאים שכבר הכרתי,<br>
-            ולפעמים להיחשף לנושאים שלא חשבתי עליהם מעולם.<br><br>
-            אני מאוד מתחברת לדרך הלימוד בשיעור, שמשלבת קטעי לימוד ברמה גבוהה עם חיבור משמעותי לחיים היומיומיים שלנו.<br>
-            בנוסף, האווירה בשיעור תמיד נעימה, מכבדת ומאפשרת, וזה תורם הרבה לחוויית הלימוד שלי.<br><br>
-            אני שמחה מאוד על הזכות לקחת חלק בשיעורים, ולפעמים אפילו חוזרת לדפי המקורות והסיכומים כדי להיזכר בדברים ולהמשיך לחשוב עליהם.<br><br>
-            תודה רבה!
+      <div class="wa-phone">
+        <div class="wa-topbar">
+          <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
+          <div class="wa-top-title">שרה מכון אורה</div>
+        </div>
+        <div class="wa-screen">
+          <div class="wa-msg">
+            <div class="wa-text">
+              היי זאת שרה מהתכנית של הבנות שירות רציתי להודות לך על כל השיעורים!!<br>
+              כל שבוע חיכיתי לשיעורים שלך וזה נתן לי כח וחיזק אותי לכל השבוע ולכל החיים!!<br>
+              תמיד שאלת שאלות ממש טובות וכל פעם נתת תשובות שהיו חדשות בשבילי והתשובות היו אפילו יותר טובות מהשאלות אז שוב תודה רבה אני ממש מעריכה:)
+            </div>
+            <div class="wa-time">20:33</div>
           </div>
-          <div class="wa-time">19:41</div>
         </div>
       </div>
-    </div>
 
-  </div>
-</section>
+      <div class="wa-phone">
+        <div class="wa-topbar">
+          <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
+          <div class="wa-top-title">בת חן מדרשת אורות אביטל ברחובות</div>
+        </div>
+        <div class="wa-screen">
+          <div class="wa-msg">
+            <div class="wa-text">
+              שלום הרב עומר,<br>
+              אשמח לשתף ולהודות על השיעורים במהלך השנתיים האחרונות.<br>
+              השיעורים של הרב תמיד גורמים לי לעצור ולחשוב, לפעמים להעמיק ולקבל זווית ראייה חדשה על נושאים שכבר הכרתי,<br>
+              ולפעמים להיחשף לנושאים שלא חשבתי עליהם מעולם.<br><br>
+              אני מאוד מתחברת לדרך הלימוד בשיעור, שמשלבת קטעי לימוד ברמה גבוהה עם חיבור משמעותי לחיים היומיומיים שלנו.<br>
+              בנוסף, האווירה בשיעור תמיד נעימה, מכבדת ומאפשרת, וזה תורם הרבה לחוויית הלימוד שלי.<br><br>
+              אני שמחה מאוד על הזכות לקחת חלק בשיעורים, ולפעמים אפילו חוזרת לדפי המקורות והסיכומים כדי להיזכר בדברים ולהמשיך לחשוב עליהם.<br><br>
+              תודה רבה!
+            </div>
+            <div class="wa-time">19:41</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <div class="cta-box">
     <div>
@@ -311,56 +632,15 @@ text-align:left;
     <a class="btn" href="https://wa.me/972506514877">לתיאום בוואטסאפ</a>
   </div>
 
- <div class="footer">
+  <div class="footer">
+    <h2>יצירת קשר</h2>
 
-<h2>יצירת קשר</h2>
+    <div class="contact-buttons">
+      <a class="contact-btn" href="tel:0506514877">📞 טלפון</a>
+      <a class="contact-btn" href="mailto:omerymh@gmail.com">✉️ אימייל</a>
+      <a class="contact-btn whatsapp" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור">💬 וואטסאפ</a>
+    </div>
+  </div>
 
-<div class="contact-buttons">
-
-<a class="contact-btn" href="tel:0506514877">
-📞 טלפון
-</a>
-
-<a class="contact-btn" href="mailto:omerymh@gmail.com">
-✉️ אימייל
-</a>
-
-<a class="contact-btn whatsapp" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור">
-💬 וואטסאפ
-</a>
-
-</div>
-
-</div>
-
-</body>  
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

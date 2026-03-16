@@ -59,7 +59,8 @@ p{
 .section,
 .testimonials-whatsapp,
 .cta-box,
-.footer{
+.footer,
+.gallery-section{
   max-width:1100px;
   margin-right:auto;
   margin-left:auto;
@@ -174,6 +175,130 @@ p{
 .image-caption .sub{
   font-size:16px;
   color:var(--muted);
+}
+
+/* gallery showcase */
+
+.gallery-section{
+  margin-top:0;
+  margin-bottom:80px;
+}
+
+.gallery-head{
+  text-align:center;
+  margin-bottom:24px;
+}
+
+.gallery-head p{
+  color:var(--muted);
+  font-size:22px;
+}
+
+.showcase{
+  position:relative;
+  min-height:520px;
+  border-radius:34px;
+  overflow:hidden;
+  background:#1b2432;
+  box-shadow:0 22px 50px rgba(0,0,0,0.20);
+}
+
+.showcase-bg{
+  position:absolute;
+  inset:0;
+  background-image:url('img1.jpg');
+  background-size:cover;
+  background-position:center;
+  filter:blur(18px);
+  transform:scale(1.12);
+  opacity:.55;
+  transition:background-image .45s ease;
+}
+
+.showcase-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg, rgba(20,27,39,.65), rgba(20,27,39,.2), rgba(20,27,39,.65));
+}
+
+.showcase-inner{
+  position:relative;
+  z-index:2;
+  height:100%;
+  min-height:520px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 110px;
+}
+
+.showcase-track{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:34px;
+}
+
+.showcase-card{
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  overflow:hidden;
+  opacity:.88;
+  transform:scale(.92);
+  transition:.35s ease;
+  box-shadow:0 14px 34px rgba(0,0,0,.24);
+  background:#ddd;
+  flex:0 0 280px;
+}
+
+.showcase-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.showcase-card.center{
+  width:360px;
+  height:360px;
+  flex:0 0 360px;
+  opacity:1;
+  transform:scale(1);
+}
+
+.showcase-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:3;
+  width:72px;
+  height:72px;
+  border:none;
+  border-radius:50%;
+  background:rgba(255,255,255,.16);
+  color:white;
+  font-size:54px;
+  line-height:1;
+  cursor:pointer;
+  backdrop-filter:blur(6px);
+  transition:.2s ease;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.showcase-arrow:hover{
+  background:rgba(255,255,255,.26);
+}
+
+.showcase-arrow.prev{
+  left:22px;
+}
+
+.showcase-arrow.next{
+  right:22px;
 }
 
 .section{
@@ -395,6 +520,33 @@ p{
   h2{
     font-size:36px;
   }
+
+  .showcase{
+    min-height:420px;
+  }
+
+  .showcase-inner{
+    min-height:420px;
+    padding:30px 70px;
+  }
+
+  .showcase-card{
+    width:190px;
+    height:190px;
+    flex-basis:190px;
+  }
+
+  .showcase-card.center{
+    width:250px;
+    height:250px;
+    flex-basis:250px;
+  }
+
+  .showcase-arrow{
+    width:56px;
+    height:56px;
+    font-size:40px;
+  }
 }
 
 @media (max-width:640px){
@@ -402,7 +554,8 @@ p{
   .section,
   .testimonials-whatsapp,
   .cta-box,
-  .footer{
+  .footer,
+  .gallery-section{
     width:calc(100% - 24px);
   }
 
@@ -443,6 +596,51 @@ p{
   .card p{
     font-size:19px;
   }
+
+  .gallery-head p,
+  .section-head p{
+    font-size:18px;
+  }
+
+  .showcase{
+    min-height:300px;
+    border-radius:24px;
+  }
+
+  .showcase-inner{
+    min-height:300px;
+    padding:20px 46px;
+  }
+
+  .showcase-track{
+    gap:14px;
+  }
+
+  .showcase-card{
+    width:108px;
+    height:108px;
+    flex-basis:108px;
+  }
+
+  .showcase-card.center{
+    width:142px;
+    height:142px;
+    flex-basis:142px;
+  }
+
+  .showcase-arrow{
+    width:42px;
+    height:42px;
+    font-size:28px;
+  }
+
+  .showcase-arrow.prev{
+    left:8px;
+  }
+
+  .showcase-arrow.next{
+    right:8px;
+  }
 }
 </style>
 </head>
@@ -476,6 +674,35 @@ p{
       </div>
     </div>
   </div>
+
+  <section class="gallery-section">
+    <div class="gallery-head">
+      <h2>שיעורים והרצאות</h2>
+      <p>מבחר תמונות מתוך שיעורים, שיחות ומפגשים עם קהלים שונים.</p>
+    </div>
+
+    <div class="showcase">
+      <div class="showcase-bg" id="showcaseBg"></div>
+      <div class="showcase-overlay"></div>
+
+      <button class="showcase-arrow prev" id="prevBtn" aria-label="הקודם">‹</button>
+      <button class="showcase-arrow next" id="nextBtn" aria-label="הבא">›</button>
+
+      <div class="showcase-inner">
+        <div class="showcase-track">
+          <div class="showcase-card" id="cardLeft">
+            <img id="imgLeft" src="img1.jpg" alt="שיעור">
+          </div>
+          <div class="showcase-card center" id="cardCenter">
+            <img id="imgCenter" src="img2.jpg" alt="שיעור">
+          </div>
+          <div class="showcase-card" id="cardRight">
+            <img id="imgRight" src="img3.jpg" alt="שיעור">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="section" id="topics">
     <div class="section-head">
@@ -584,9 +811,9 @@ p{
         <div class="wa-screen">
           <div class="wa-msg">
             <div class="wa-text">
-              היי זאת שרה מהתכנית של הבנות שירות רציתי להודות לך על כל השיעורים!!<br>
+              שלום, רציתי להודות לך על כל השיעורים!!<br>
               כל שבוע חיכיתי לשיעורים שלך וזה נתן לי כח וחיזק אותי לכל השבוע ולכל החיים!!<br>
-              תמיד שאלת שאלות ממש טובות וכל פעם נתת תשובות שהיו חדשות בשבילי והתשובות היו אפילו יותר טובות מהשאלות אז שוב תודה רבה אני ממש מעריכה:)
+              תמיד שאלת שאלות ממש טובות וכל פעם נתת תשובות שהיו חדשות בשבילי, אז שוב תודה רבה.
             </div>
             <div class="wa-time">20:33</div>
           </div>
@@ -603,11 +830,8 @@ p{
             <div class="wa-text">
               שלום הרב עומר,<br>
               אשמח לשתף ולהודות על השיעורים במהלך השנתיים האחרונות.<br>
-              השיעורים של הרב תמיד גורמים לי לעצור ולחשוב, לפעמים להעמיק ולקבל זווית ראייה חדשה על נושאים שכבר הכרתי,<br>
-              ולפעמים להיחשף לנושאים שלא חשבתי עליהם מעולם.<br><br>
-              אני מאוד מתחברת לדרך הלימוד בשיעור, שמשלבת קטעי לימוד ברמה גבוהה עם חיבור משמעותי לחיים היומיומיים שלנו.<br>
-              בנוסף, האווירה בשיעור תמיד נעימה, מכבדת ומאפשרת, וזה תורם הרבה לחוויית הלימוד שלי.<br><br>
-              אני שמחה מאוד על הזכות לקחת חלק בשיעורים, ולפעמים אפילו חוזרת לדפי המקורות והסיכומים כדי להיזכר בדברים ולהמשיך לחשוב עליהם.<br><br>
+              השיעורים תמיד גורמים לי לעצור ולחשוב, להעמיק ולקבל זווית ראייה חדשה.<br><br>
+              אני מאוד מתחברת לדרך הלימוד שמשלבת לימוד ברמה גבוהה עם חיבור משמעותי לחיים.<br><br>
               תודה רבה!
             </div>
             <div class="wa-time">19:41</div>
@@ -634,6 +858,50 @@ p{
       <a class="contact-btn whatsapp" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור">💬 וואטסאפ</a>
     </div>
   </div>
+
+<script>
+const galleryImages = [
+  "img1.jpg",
+  "img2.jpg",
+  "img3.jpg",
+  "img4.jpg",
+  "img5.jpg",
+  "img6.jpg",
+  "img7.jpg"
+];
+
+let currentIndex = 1;
+
+const showcaseBg = document.getElementById("showcaseBg");
+const imgLeft = document.getElementById("imgLeft");
+const imgCenter = document.getElementById("imgCenter");
+const imgRight = document.getElementById("imgRight");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+function updateGallery(){
+  const leftIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  const rightIndex = (currentIndex + 1) % galleryImages.length;
+
+  imgLeft.src = galleryImages[leftIndex];
+  imgCenter.src = galleryImages[currentIndex];
+  imgRight.src = galleryImages[rightIndex];
+
+  showcaseBg.style.backgroundImage = "url('" + galleryImages[currentIndex] + "')";
+}
+
+prevBtn.addEventListener("click", function(){
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  updateGallery();
+});
+
+nextBtn.addEventListener("click", function(){
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  updateGallery();
+});
+
+updateGallery();
+</script>
 
 </body>
 </html>

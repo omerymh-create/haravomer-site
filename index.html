@@ -75,24 +75,32 @@ p{
 }
 
 .hero{
-  display:grid;
-  grid-template-columns:1.05fr 0.95fr;
-  gap:40px;
-  align-items:center;
-  padding:42px;
-  border-radius:34px;
-  margin-top:30px;
-  margin-bottom:80px;
-  background:
-    radial-gradient(circle at top right,#cbb28a 0%,transparent 45%),
-    radial-gradient(circle at bottom left,#e8dcc7 0%,transparent 50%),
-    linear-gradient(135deg,#2b3240 0%,#1c2433 100%);
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  text-align:center;
+  padding:0 16px;
+  padding-top:120px;
   color:white;
-  box-shadow:0 24px 50px rgba(0,0,0,0.25);
+  overflow:hidden;
 }
-
+  
+.hero::after{
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.65)
+  );
+}
+  
 .hero-copy{
-  min-width:0;
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:0 auto;
 }
 
 .hero-copy p{
@@ -174,9 +182,13 @@ p{
 }
 
 .hero img{
+  position:absolute;
+  inset:0;
   width:100%;
-  display:block;
-  border-radius:22px;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+  border-radius:0;
 }
 
 .image-caption{
@@ -739,7 +751,7 @@ p{
   }
 
   h1{
-    font-size:34px;
+    font-size:42px;
     line-height:1.15;
     margin-bottom:14px;
   }
@@ -859,15 +871,7 @@ p{
       </div>
     </div>
 
-    <div class="hero-media">
-      <div class="hero-media-card">
-        <img src="עומר פורפיל חדש.png" alt="הרב עומר דודוביץ">
-        <div class="image-caption">
-          <div class="title">הרב עומר דודוביץ</div>
-          <div class="sub">שיעורים, שיחות והרצאות למוסדות חינוך ולנוער</div>
-        </div>
-      </div>
-    </div>
+ <img src="עומר פורפיל חדש.png" alt="הרב עומר דודוביץ">
   </div>
 
   <section class="gallery-section">
@@ -931,7 +935,6 @@ p{
         <div class="wa-screen">
           <div class="wa-msg">
             <div class="wa-text">
-              כן נכון<br>
               יש פעמים שאני מגיעה למדרשה במיוחד לשיעורים האלו, וכולנו נהנות מאוד מאוד מהשיעורים.<br>
               כל שיעור שהרב מעביר עוצמתי במפגש שלו בחיי היום יום, ואצלי אישית מתחיל ביישום עוד בזמן השיעור!<br>
               <br> <br> תודה רבה

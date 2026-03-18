@@ -859,7 +859,8 @@ p{
   .floating-whatsapp{
   position:fixed;
   left:18px;
-  bottom:18px;
+  top:50%;
+  transform:translateY(-50%);
   z-index:9999;
   display:inline-flex;
   align-items:center;
@@ -877,7 +878,7 @@ p{
 }
 
 .floating-whatsapp:hover{
-  transform:translateY(-2px);
+  transform:translateY(-50%) translateY(-2px);
   box-shadow:0 14px 30px rgba(0,0,0,0.22);
 }
 
@@ -889,7 +890,8 @@ p{
 @media (max-width:640px){
   .floating-whatsapp{
     left:12px;
-    bottom:12px;
+    top:50%;
+    transform:translateY(-50%);
     width:54px;
     height:54px;
     padding:0;

@@ -32,6 +32,10 @@ body{
   overflow-x:hidden;
 }
 
+body.modal-open{
+  overflow:hidden;
+}
+
 img{
   max-width:100%;
   height:auto;
@@ -92,7 +96,8 @@ p{
   color:white;
   box-shadow:0 24px 50px rgba(0,0,0,0.25);
 }
-  .bsd{
+
+.bsd{
   position:absolute;
   top:14px;
   right:18px;
@@ -101,6 +106,7 @@ p{
   color:rgba(255,255,255,0.85);
   z-index:5;
 }
+
 .hero-copy{
   position:relative;
   z-index:2;
@@ -124,7 +130,6 @@ p{
 .hero-actions{
   display:flex;
   gap:14px;
-  flex-wrap:nowrap;
   flex-wrap:wrap;
   margin-top:24px;
   justify-content:center;
@@ -207,7 +212,6 @@ p{
 }
 
 /* gallery showcase */
-
 .gallery-section{
   margin-top:0;
   margin-bottom:80px;
@@ -283,6 +287,7 @@ p{
   box-shadow:0 14px 34px rgba(0,0,0,.24);
   background:#ddd;
   flex:0 0 280px;
+  cursor:pointer;
 }
 
 .showcase-card img{
@@ -352,9 +357,11 @@ p{
   grid-template-columns:repeat(3,1fr);
   gap:24px;
 }
+
 .video-cards{
   grid-template-columns:repeat(2,1fr);
 }
+
 .card{
   background:var(--card);
   padding:34px 30px;
@@ -394,6 +401,65 @@ p{
   font-size:22px;
   color:var(--muted);
   line-height:1.9;
+}
+
+/* flyers */
+.flyers-section{
+  margin-top:44px;
+  text-align:center;
+}
+
+.flyers-title{
+  font-size:34px;
+  margin-bottom:10px;
+  color:var(--dark);
+}
+
+.flyers-subtitle{
+  color:var(--muted);
+  font-size:20px;
+  margin-bottom:24px;
+}
+
+.flyers-stack{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+  align-items:start;
+}
+
+.flyer-card{
+  display:block;
+  background:#fff;
+  border-radius:24px;
+  padding:14px;
+  box-shadow:0 18px 40px rgba(0,0,0,0.10);
+  transition:transform .25s ease, box-shadow .25s ease;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.flyer-card:nth-child(1){
+  transform:rotate(-4deg);
+}
+
+.flyer-card:nth-child(2){
+  transform:translateY(16px) rotate(2deg);
+}
+
+.flyer-card:nth-child(3){
+  transform:rotate(4deg);
+}
+
+.flyer-card:hover{
+  transform:translateY(-8px) rotate(0deg);
+  box-shadow:0 22px 48px rgba(0,0,0,0.16);
+}
+
+.flyer-card img{
+  width:100%;
+  display:block;
+  border-radius:18px;
 }
 
 .testimonials-whatsapp{
@@ -541,6 +607,157 @@ p{
   background:#25D366;
 }
 
+.contact-btn.whatsapp-group{
+  background:#1fb856;
+}
+
+.contact-btn.youtube{
+  background:#ff0000;
+}
+
+.floating-whatsapp{
+  position:fixed;
+  left:18px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:9999;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  padding:12px 16px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:15px;
+  line-height:1;
+  box-shadow:0 10px 24px rgba(0,0,0,0.18);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.floating-whatsapp:hover{
+  transform:translateY(-50%) translateY(-2px);
+  box-shadow:0 14px 30px rgba(0,0,0,0.22);
+}
+
+.floating-whatsapp .wa-icon{
+  font-size:18px;
+  line-height:1;
+}
+
+/* modal */
+.image-modal{
+  position:fixed;
+  inset:0;
+  z-index:10000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(10,15,25,0.82);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .22s ease;
+}
+
+.image-modal.open{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.image-modal-dialog{
+  position:relative;
+  width:min(100%, 1100px);
+  max-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.image-modal-content{
+  position:relative;
+  width:100%;
+  max-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.image-modal-content img{
+  max-width:100%;
+  max-height:90vh;
+  width:auto;
+  height:auto;
+  border-radius:18px;
+  box-shadow:0 18px 50px rgba(0,0,0,0.35);
+  background:#fff;
+}
+
+.image-modal-close,
+.image-modal-nav{
+  position:absolute;
+  border:none;
+  border-radius:50%;
+  background:rgba(255,255,255,0.96);
+  color:#111827;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.22);
+}
+
+.image-modal-close{
+  top:-14px;
+  left:-14px;
+  width:48px;
+  height:48px;
+  font-size:28px;
+  line-height:1;
+  z-index:3;
+}
+
+.image-modal-nav{
+  top:50%;
+  transform:translateY(-50%);
+  width:56px;
+  height:56px;
+  font-size:34px;
+  z-index:3;
+}
+
+.image-modal-nav.prev{
+  right:-72px;
+}
+
+.image-modal-nav.next{
+  left:-72px;
+}
+
+.image-modal-close:hover,
+.image-modal-nav:hover{
+  transform:translateY(-50%) scale(1.04);
+}
+
+.image-modal-close:hover{
+  transform:scale(1.04);
+}
+
+.image-modal-counter{
+  position:absolute;
+  bottom:-44px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(255,255,255,0.96);
+  color:#111827;
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:15px;
+  font-weight:700;
+  box-shadow:0 8px 18px rgba(0,0,0,0.16);
+}
+
 @media (max-width:980px){
   .hero{
     grid-template-columns:1fr;
@@ -561,6 +778,10 @@ p{
   }
 
   .wa-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .flyers-stack{
     grid-template-columns:repeat(2,1fr);
   }
 
@@ -603,6 +824,14 @@ p{
     height:56px;
     font-size:40px;
   }
+
+  .image-modal-nav.prev{
+    right:10px;
+  }
+
+  .image-modal-nav.next{
+    left:10px;
+  }
 }
 
 @media (max-width:640px){
@@ -625,45 +854,47 @@ p{
 
   .hero-copy{
     text-align:center;
+    padding:10px 4px 0;
   }
 
-.hero-media{
-  margin-bottom:8px;
-}
+  .hero-media{
+    margin-bottom:8px;
+  }
 
-.hero-media-card{
-  padding:0;
-  border-radius:22px;
-  overflow:hidden;
-  background:rgba(255,255,255,0.96);
-}
+  .hero-media-card{
+    padding:0;
+    border-radius:22px;
+    overflow:hidden;
+    background:rgba(255,255,255,0.96);
+  }
 
-.hero-media img{
-  width:100%;
-  height:auto;
-  object-fit:cover;
-  display:block;
-}
+  .hero-media img{
+    width:100%;
+    height:auto;
+    object-fit:cover;
+    display:block;
+  }
 
-.hero img{
-  border-radius:22px 22px 0 0;
-}
+  .hero img{
+    border-radius:22px 22px 0 0;
+  }
 
-.image-caption{
-  padding:16px 14px 18px;
-  text-align:center;
-}
+  .image-caption{
+    padding:16px 14px 18px;
+    text-align:center;
+  }
 
-.image-caption .title{
-  font-size:26px;
-  line-height:1.15;
-  margin-bottom:6px;
-}
+  .image-caption .title{
+    font-size:26px;
+    line-height:1.15;
+    margin-bottom:6px;
+  }
 
-.image-caption .sub{
-  font-size:17px;
-  line-height:1.5;
-}
+  .image-caption .sub{
+    font-size:17px;
+    line-height:1.5;
+  }
+
   .hero-actions{
     flex-direction:column;
     gap:10px;
@@ -694,10 +925,11 @@ p{
     grid-template-columns:1fr;
     gap:16px;
   }
-  
-.video-cards{
-  grid-template-columns:1fr;
-}
+
+  .video-cards{
+    grid-template-columns:1fr;
+  }
+
   .card{
     padding:22px 18px;
     border-radius:20px;
@@ -816,32 +1048,32 @@ p{
     border-radius:22px;
   }
 
- .showcase-inner{
-  min-height:320px;
-  padding:10px 10px;
-}
+  .showcase-inner{
+    min-height:320px;
+    padding:10px 10px;
+  }
 
-.showcase-track{
-  gap:8px;
-  transition:transform .2s ease;
-}
+  .showcase-track{
+    gap:8px;
+    transition:transform .2s ease;
+  }
 
-.showcase-card{
-  width:140px;
-  height:140px;
-  flex-basis:140px;
-  opacity:0.7;
-  transform:scale(0.9);
-}
+  .showcase-card{
+    width:140px;
+    height:140px;
+    flex-basis:140px;
+    opacity:0.7;
+    transform:scale(0.9);
+  }
 
-.showcase-card.center{
-  width:260px;
-  height:260px;
-  flex-basis:260px;
-  opacity:1;
-  transform:scale(1);
-  box-shadow:0 12px 30px rgba(0,0,0,0.3);
-}
+  .showcase-card.center{
+    width:260px;
+    height:260px;
+    flex-basis:260px;
+    opacity:1;
+    transform:scale(1);
+    box-shadow:0 12px 30px rgba(0,0,0,0.3);
+  }
 
   .showcase-arrow{
     width:38px;
@@ -856,39 +1088,26 @@ p{
   .showcase-arrow.next{
     right:6px;
   }
-}
-  .floating-whatsapp{
-  position:fixed;
-  left:18px;
-  top:50%;
-  transform:translateY(-50%);
-  z-index:9999;
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  background:#25D366;
-  color:#fff;
-  text-decoration:none;
-  padding:12px 16px;
-  border-radius:999px;
-  font-weight:800;
-  font-size:15px;
-  line-height:1;
-  box-shadow:0 10px 24px rgba(0,0,0,0.18);
-  transition:transform .2s ease, box-shadow .2s ease;
-}
 
-.floating-whatsapp:hover{
-  transform:translateY(-50%) translateY(-2px);
-  box-shadow:0 14px 30px rgba(0,0,0,0.22);
-}
+  .flyers-stack{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
 
-.floating-whatsapp .wa-icon{
-  font-size:18px;
-  line-height:1;
-}
+  .flyer-card:nth-child(1),
+  .flyer-card:nth-child(2),
+  .flyer-card:nth-child(3){
+    transform:none;
+  }
 
-@media (max-width:640px){
+  .flyers-title{
+    font-size:28px;
+  }
+
+  .flyers-subtitle{
+    font-size:17px;
+  }
+
   .floating-whatsapp{
     left:12px;
     top:50%;
@@ -908,10 +1127,53 @@ p{
   .floating-whatsapp .wa-icon{
     font-size:22px;
   }
+
+  .image-modal{
+    padding:14px;
+  }
+
+  .image-modal-dialog{
+    width:100%;
+    max-height:86vh;
+  }
+
+  .image-modal-content img{
+    max-height:78vh;
+    border-radius:14px;
+  }
+
+  .image-modal-close{
+    top:-10px;
+    left:-2px;
+    width:42px;
+    height:42px;
+    font-size:24px;
+  }
+
+  .image-modal-nav{
+    width:42px;
+    height:42px;
+    font-size:24px;
+  }
+
+  .image-modal-nav.prev{
+    right:4px;
+  }
+
+  .image-modal-nav.next{
+    left:4px;
+  }
+
+  .image-modal-counter{
+    bottom:-38px;
+    font-size:13px;
+    padding:7px 12px;
+  }
 }
 </style>
 </head>
 <body>
+
 <a class="floating-whatsapp"
    href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור"
    target="_blank"
@@ -920,65 +1182,67 @@ p{
   <span class="wa-icon">💬</span>
   <span class="wa-text">להזמנת שיחה</span>
 </a>
-  
-  <div class="hero">
-    <div class="bsd">בס"ד</div>
-    <div class="hero-copy">
-      <p class="eyebrow">הרב עומר דודוביץ • שיעורים למוסדות חינוך, מדרשות, ישיבות וקהילות</p>
-      <h1>תורה עמוקה שמדברת אל החיים</h1>
-      <p>שיעורים, שיחות והרצאות שנמסרים מתוך עומק תורני, בהירות מחשבתית, חיבור לעולם הנפש ולשאלות של הדור — באופן חי, נוגע ומשמעותי.</p>
 
-      <div class="hero-actions">
-  <a class="btn" href="https://wa.me/972506514877">לתיאום שיעור</a>
-  <a class="btn secondary" href="#topics">לנושאים לשיעורים</a>
-  <a class="btn secondary" href="#testimonials">להמלצות</a>
-</div> 
+<div class="hero">
+  <div class="bsd">בס"ד</div>
 
-      <div class="hero-points">
-        <div class="point"><strong>עומק</strong><span>מקורות, מחשבה, תורת הרב קוק ושאלות היסוד באמונה.</span></div>
-        <div class="point"><strong>חיבור</strong><span>מפגש אמיתי עם עולמם של תלמידים, בוגרים וצוותים חינוכיים.</span></div>
-        <div class="point"><strong>השפעה</strong><span>שיעור שנוגע בזמן אמת וממשיך ללוות גם אחר כך.</span></div>
-      </div>
+  <div class="hero-copy">
+    <p class="eyebrow">הרב עומר דודוביץ • שיעורים למוסדות חינוך, מדרשות, ישיבות וקהילות</p>
+    <h1>תורה עמוקה שמדברת אל החיים</h1>
+    <p>שיעורים, שיחות והרצאות שנמסרים מתוך עומק תורני, בהירות מחשבתית, חיבור לעולם הנפש ולשאלות של הדור — באופן חי, נוגע ומשמעותי.</p>
+
+    <div class="hero-actions">
+      <a class="btn" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור" target="_blank" rel="noopener">לתיאום שיעור</a>
+      <a class="btn secondary" href="#topics">לנושאים לשיעורים</a>
+      <a class="btn secondary" href="#testimonials">להמלצות</a>
     </div>
-<div class="hero-media">
-  <div class="hero-media-card">
-    <img src="עומר פורפיל חדש.png" alt="הרב עומר דודוביץ">
-    <div class="image-caption">
-      <div class="title">הרב עומר דודוביץ</div>
-      <div class="sub">שיעורים, שיחות והרצאות למוסדות חינוך, בוגרים ולנוער</div>
+
+    <div class="hero-points">
+      <div class="point"><strong>עומק</strong><span>מקורות, מחשבה, תורת הרב קוק ושאלות היסוד באמונה.</span></div>
+      <div class="point"><strong>חיבור</strong><span>מפגש אמיתי עם עולמם של תלמידים, בוגרים וצוותים חינוכיים.</span></div>
+      <div class="point"><strong>השפעה</strong><span>שיעור שנוגע בזמן אמת וממשיך ללוות גם אחר כך.</span></div>
+    </div>
+  </div>
+
+  <div class="hero-media">
+    <div class="hero-media-card">
+      <img src="עומר פורפיל חדש.png" alt="הרב עומר דודוביץ">
+      <div class="image-caption">
+        <div class="title">הרב עומר דודוביץ</div>
+        <div class="sub">שיעורים, שיחות והרצאות למוסדות חינוך, בוגרים ולנוער</div>
+      </div>
     </div>
   </div>
 </div>
+
+<section class="gallery-section">
+  <div class="gallery-head">
+    <h2>שיעורים והרצאות</h2>
+    <p>מבחר תמונות מתוך שיעורים, שיחות ומפגשים עם קהלים שונים.</p>
   </div>
 
-  <section class="gallery-section">
-    <div class="gallery-head">
-      <h2>שיעורים והרצאות</h2>
-      <p>מבחר תמונות מתוך שיעורים, שיחות ומפגשים עם קהלים שונים.</p>
-    </div>
+  <div class="showcase">
+    <div class="showcase-bg" id="showcaseBg"></div>
+    <div class="showcase-overlay"></div>
 
-    <div class="showcase">
-      <div class="showcase-bg" id="showcaseBg"></div>
-      <div class="showcase-overlay"></div>
+    <button class="showcase-arrow prev" id="prevBtn" aria-label="הקודם">‹</button>
+    <button class="showcase-arrow next" id="nextBtn" aria-label="הבא">›</button>
 
-      <button class="showcase-arrow prev" id="prevBtn" aria-label="הקודם">‹</button>
-      <button class="showcase-arrow next" id="nextBtn" aria-label="הבא">›</button>
-
-      <div class="showcase-inner">
-        <div class="showcase-track">
-          <div class="showcase-card" id="cardLeft">
-            <img id="imgLeft" src="img1.jpg" alt="שיעור">
-          </div>
-          <div class="showcase-card center" id="cardCenter">
-            <img id="imgCenter" src="img2.jpg" alt="שיעור">
-          </div>
-          <div class="showcase-card" id="cardRight">
-            <img id="imgRight" src="img3.jpg" alt="שיעור">
-          </div>
+    <div class="showcase-inner">
+      <div class="showcase-track">
+        <div class="showcase-card" id="cardLeft">
+          <img id="imgLeft" src="img1.jpg" alt="שיעור">
+        </div>
+        <div class="showcase-card center" id="cardCenter">
+          <img id="imgCenter" src="img2.jpg" alt="שיעור">
+        </div>
+        <div class="showcase-card" id="cardRight">
+          <img id="imgRight" src="img3.jpg" alt="שיעור">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <div class="section">
   <div class="section-head">
@@ -986,208 +1250,234 @@ p{
     <p>מבחר שיעורים לצפייה ישירה מתוך ערוץ היוטיוב.</p>
   </div>
 
-<div class="cards video-cards">
-<div class="card">
-<iframe width="100%" height="300"
-src="https://www.youtube.com/embed/ONjDQMLj9ew"
-title="YouTube video player"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
+  <div class="cards video-cards">
+    <div class="card">
+      <iframe width="100%" height="300"
+      src="https://www.youtube.com/embed/ONjDQMLj9ew"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
       <h3>?איך מתכוננים לפורים</h3>
     </div>
 
     <div class="card">
-     <iframe width="100%" height="300"
-src="https://www.youtube.com/embed/TZvQNtapAAg"
-title="YouTube video player"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
+      <iframe width="100%" height="300"
+      src="https://www.youtube.com/embed/TZvQNtapAAg"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
       <h3>למה נבראנו?</h3>
     </div>
 
     <div class="card">
-    <iframe width="100%" height="300"
-src="https://www.youtube.com/embed/SBTFkWPVbVc"
-title="YouTube video player"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
+      <iframe width="100%" height="300"
+      src="https://www.youtube.com/embed/SBTFkWPVbVc"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
       <h3>מה יותר אוהבים את הדומה או את השונה</h3>
     </div>
 
     <div class="card">
       <iframe width="100%" height="300"
-src="https://www.youtube.com/embed/kzd-cu7TUyw"
-title="YouTube video player"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
+      src="https://www.youtube.com/embed/kzd-cu7TUyw"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
       <h3>שיעור מתוך מכון אורה</h3>
     </div>
   </div>
 </div>
 
-  <div class="section" id="topics">
-    <div class="section-head">
-      <h2>נושאים לשיעורים</h2>
-      <p>אפשר להזמין שיעור חד־פעמי, סדרת מפגשים, ערב חיזוק או נושא מותאם במיוחד לקהל.</p>
-    </div>
+<div class="section" id="topics">
+  <div class="section-head">
+    <h2>נושאים לשיעורים</h2>
+    <p>אפשר להזמין שיעור חד־פעמי, סדרת מפגשים, ערב חיזוק או נושא מותאם במיוחד לקהל.</p>
+  </div>
 
-    <div class="cards">
-      <div class="card"><h3>בניין האישיות</h3><p>איך להתמודד עם קנאה, כעס ועצלות ולבנות אישיות חזקה, מאירה ובריאה.</p></div>
-      <div class="card"><h3>תורת הרב קוק</h3><p>עומק תפיסת הגאולה והחזון של עם ישראל, תורת ישראל וארץ ישראל.</p></div>
-      <div class="card"><h3>בירור האמונה</h3><p>תשובות לשאלות היסוד באמונה וביסוס אמונת ישראל באופן בהיר ובנוי.</p></div>
-      <div class="card"><h3>עבודת המועדים</h3><p>שיחות עומק לקראת חגי ישראל והמשמעות הפנימית שלהם לחיים.</p></div>
-      <div class="card"><h3>דור הגאולה</h3><p>המשמעות של החיים בדור שלנו, האחריות שלנו והזכות להיות חלק מהמהלך.</p></div>
-      <div class="card"><h3>זוגיות ובניין הבית</h3><p>שיחות לבוגרים על זוגיות, פגישות ובניין הבית מתוך בשלות ואמונה.</p></div>
+  <div class="cards">
+    <div class="card"><h3>בניין האישיות</h3><p>איך להתמודד עם קנאה, כעס ועצלות ולבנות אישיות חזקה, מאירה ובריאה.</p></div>
+    <div class="card"><h3>תורת הרב קוק</h3><p>עומק תפיסת הגאולה והחזון של עם ישראל, תורת ישראל וארץ ישראל.</p></div>
+    <div class="card"><h3>בירור האמונה</h3><p>תשובות לשאלות היסוד באמונה וביסוס אמונת ישראל באופן בהיר ובנוי.</p></div>
+    <div class="card"><h3>עבודת המועדים</h3><p>שיחות עומק לקראת חגי ישראל והמשמעות הפנימית שלהם לחיים.</p></div>
+    <div class="card"><h3>דור הגאולה</h3><p>המשמעות של החיים בדור שלנו, האחריות שלנו והזכות להיות חלק מהמהלך.</p></div>
+    <div class="card"><h3>זוגיות ובניין הבית</h3><p>שיחות לבוגרים על זוגיות, פגישות ובניין הבית מתוך בשלות ואמונה.</p></div>
+  </div>
+
+  <div class="flyers-section">
+    <div class="flyers-title">פליירים לדוגמה</div>
+    <p class="flyers-subtitle">מבחר פליירים מתוך שיעורים, סדרות והרצאות.</p>
+
+    <div class="flyers-stack">
+      <a href="flyer1.jpg" class="flyer-card js-open-flyer" data-image="flyer1.jpg" aria-label="פתיחת פלייר 1">
+        <img src="flyer1.jpg" alt="פלייר 1">
+      </a>
+
+      <a href="flyer2.jpg" class="flyer-card js-open-flyer" data-image="flyer2.jpg" aria-label="פתיחת פלייר 2">
+        <img src="flyer2.jpg" alt="פלייר 2">
+      </a>
+
+      <a href="flyer3.jpg" class="flyer-card js-open-flyer" data-image="flyer3.jpg" aria-label="פתיחת פלייר 3">
+        <img src="flyer3.jpg" alt="פלייר 3">
+      </a>
     </div>
   </div>
+</div>
 
 <section class="testimonials-whatsapp" id="testimonials">
   <div class="section-head">
-      <h2>משובים מתלמידים</h2>
-      <p>כמה תגובות נבחרות מתוך משובים שנשלחו אחרי שיעורים ושיחות.</p>
+    <h2>משובים מתלמידים</h2>
+    <p>כמה תגובות נבחרות מתוך משובים שנשלחו אחרי שיעורים ושיחות.</p>
+  </div>
+
+  <div class="wa-grid">
+    <div class="wa-phone short">
+      <div class="wa-topbar">
+        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
+        <div class="wa-top-title">יעל מכון אורה</div>
+      </div>
+      <div class="wa-screen">
+        <div class="wa-msg">
+          <div class="wa-text">
+            יש פעמים שאני מגיעה למדרשה במיוחד לשיעורים האלו, וכולנו נהנות מאוד מאוד מהשיעורים.<br>
+            כל שיעור שהרב מעביר עוצמתי במפגש שלו בחיי היום יום, ואצלי אישית מתחיל ביישום עוד בזמן השיעור!<br>
+            <br><br>תודה רבה
+          </div>
+          <div class="wa-time">23:07</div>
+        </div>
+      </div>
     </div>
 
-    <div class="wa-grid">
-
-     <div class="wa-phone short">
-        <div class="wa-topbar">
-          <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-          <div class="wa-top-title">יעל מכון אורה</div>
-        </div>
-        <div class="wa-screen">
-          <div class="wa-msg">
-            <div class="wa-text">
-              יש פעמים שאני מגיעה למדרשה במיוחד לשיעורים האלו, וכולנו נהנות מאוד מאוד מהשיעורים.<br>
-              כל שיעור שהרב מעביר עוצמתי במפגש שלו בחיי היום יום, ואצלי אישית מתחיל ביישום עוד בזמן השיעור!<br>
-              <br> <br> תודה רבה
-            </div>
-            <div class="wa-time">23:07</div>
+    <div class="wa-phone long">
+      <div class="wa-topbar">
+        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
+        <div class="wa-top-title">שרה מכון אורה</div>
+      </div>
+      <div class="wa-screen">
+        <div class="wa-msg">
+          <div class="wa-text">
+            שלום, רציתי להודות לך על כל השיעורים!!<br><br>
+            כל שבוע חיכיתי לשיעורים שלך וזה נתן לי כח וחיזק אותי לכל השבוע ולכל החיים!!<br><br>
+            תמיד שאלת שאלות ממש טובות וכל פעם נתת תשובות שהיו חדשות בשבילי,<br><br>
+            אז שוב תודה רבה.
           </div>
+          <div class="wa-time">20:33</div>
         </div>
       </div>
-
-      <div class="wa-phone long">
-        <div class="wa-topbar">
-          <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-          <div class="wa-top-title">שרה מכון אורה</div>
-        </div>
-        <div class="wa-screen">
-          <div class="wa-msg">
-            <div class="wa-text">
-              שלום, רציתי להודות לך על כל השיעורים!!<br><br>
-              כל שבוע חיכיתי לשיעורים שלך וזה נתן לי כח וחיזק אותי לכל השבוע ולכל החיים!!<br><br>
-              תמיד שאלת שאלות ממש טובות וכל פעם נתת תשובות שהיו חדשות בשבילי, 
-              <br><br> אז שוב תודה רבה.
-            </div>
-            <div class="wa-time">20:33</div>
-          </div>
-        </div>
-      </div>
-
-     <div class="wa-phone short">
-        <div class="wa-topbar">
-          <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-          <div class="wa-top-title">רכזת חברתית אולפנת ראשית</div>
-        </div>
-        <div class="wa-screen">
-          <div class="wa-msg">
-            <div class="wa-text">
-             ערב טוב הרב<br>
-             הבנות מאוד מאוד נהנו בשיחה ושמחו ממנה,<br>
-              ביקשו שהרב יגיע שוב. אשמח שנתאם עוד בע"ה.<br>
-              תודה!
-            </div>
-            <div class="wa-time">21:18</div>
-          </div>
-        </div>
-      </div>
+    </div>
 
     <div class="wa-phone short">
-        <div class="wa-topbar">
-          <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-          <div class="wa-top-title">תלמידה מדרשת שלהבת הנשמה</div>
-        </div>
-        <div class="wa-screen">
-          <div class="wa-msg">
-            <div class="wa-text">
-              הרב אני זוכרת ממש לטובה את השיעור של פורים שעבר<br>
-              זה היה השיעור הראשון שלי במדרשה<br>
-              שמעתי אותו אחר כך ארבע פעמים.<br>
-              אשריכם ישראל
-            </div>
-            <div class="wa-time">20:33</div>
+      <div class="wa-topbar">
+        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
+        <div class="wa-top-title">רכזת חברתית אולפנת ראשית</div>
+      </div>
+      <div class="wa-screen">
+        <div class="wa-msg">
+          <div class="wa-text">
+            ערב טוב הרב<br>
+            הבנות מאוד מאוד נהנו בשיחה ושמחו ממנה,<br>
+            ביקשו שהרב יגיע שוב. אשמח שנתאם עוד בע"ה.<br>
+            תודה!
           </div>
+          <div class="wa-time">21:18</div>
         </div>
       </div>
-
-     <div class="wa-phone long">
-        <div class="wa-topbar">
-          <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-          <div class="wa-top-title">תורה נוער אלקנה</div>
-        </div>
-        <div class="wa-screen">
-          <div class="wa-msg">
-            <div class="wa-text">
-              ערב טוב הרב,<br>
-              רציתי להגיד תודה רבה על השיעור שהרב העביר. זה היה ממש מעמיק, נוגע ומחובר לעולם של הנוער.<br>
-              הרגשתי שיש מקום לשאלות, למחשבות, ולא רק לשמוע אלא גם להתחבר באמת למה שנאמר.<br><br>
-              הרבה נערים ונערות יצאו מהשיעור עם נקודות למחשבה, והיה אפשר לראות שזה נגע בהם.<br>
-              זה לא מובן מאליו, וזה לגמרי השאיר חותם.<br>
-              מקווה שתהיה עוד הזדמנות לשיעורים כאלה!<br>
-              תודה גדולה הרב!
-            </div>
-            <div class="wa-time">20:45</div>
-          </div>
-        </div>
-      </div>
-
-     <div class="wa-phone long">
-        <div class="wa-topbar">
-          <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-          <div class="wa-top-title">בת חן מדרשת אורות אביטל ברחובות</div>
-        </div>
-        <div class="wa-screen">
-          <div class="wa-msg">
-            <div class="wa-text">
-              שלום הרב עומר,<br>
-              אשמח לשתף ולהודות על השיעורים במהלך השנתיים האחרונות.<br>
-              השיעורים תמיד גורמים לי לעצור ולחשוב, להעמיק ולקבל זווית ראייה חדשה.<br><br>
-              אני מאוד מתחברת לדרך הלימוד שמשלבת לימוד ברמה גבוהה עם חיבור משמעותי לחיים.<br><br>
-              תודה רבה!
-            </div>
-            <div class="wa-time">19:41</div>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <div class="wa-phone short">
+      <div class="wa-topbar">
+        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
+        <div class="wa-top-title">תלמידה מדרשת שלהבת הנשמה</div>
+      </div>
+      <div class="wa-screen">
+        <div class="wa-msg">
+          <div class="wa-text">
+            הרב אני זוכרת ממש לטובה את השיעור של פורים שעבר<br>
+            זה היה השיעור הראשון שלי במדרשה<br>
+            שמעתי אותו אחר כך ארבע פעמים.<br>
+            אשריכם ישראל
+          </div>
+          <div class="wa-time">20:33</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wa-phone long">
+      <div class="wa-topbar">
+        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
+        <div class="wa-top-title">תורה נוער אלקנה</div>
+      </div>
+      <div class="wa-screen">
+        <div class="wa-msg">
+          <div class="wa-text">
+            ערב טוב הרב,<br>
+            רציתי להגיד תודה רבה על השיעור שהרב העביר. זה היה ממש מעמיק, נוגע ומחובר לעולם של הנוער.<br>
+            הרגשתי שיש מקום לשאלות, למחשבות, ולא רק לשמוע אלא גם להתחבר באמת למה שנאמר.<br><br>
+            הרבה נערים ונערות יצאו מהשיעור עם נקודות למחשבה, והיה אפשר לראות שזה נגע בהם.<br>
+            זה לא מובן מאליו, וזה לגמרי השאיר חותם.<br>
+            מקווה שתהיה עוד הזדמנות לשיעורים כאלה!<br>
+            תודה גדולה הרב!
+          </div>
+          <div class="wa-time">20:45</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wa-phone long">
+      <div class="wa-topbar">
+        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
+        <div class="wa-top-title">בת חן מדרשת אורות אביטל ברחובות</div>
+      </div>
+      <div class="wa-screen">
+        <div class="wa-msg">
+          <div class="wa-text">
+            שלום הרב עומר,<br>
+            אשמח לשתף ולהודות על השיעורים במהלך השנתיים האחרונות.<br>
+            השיעורים תמיד גורמים לי לעצור ולחשוב, להעמיק ולקבל זווית ראייה חדשה.<br><br>
+            אני מאוד מתחברת לדרך הלימוד שמשלבת לימוד ברמה גבוהה עם חיבור משמעותי לחיים.<br><br>
+            תודה רבה!
+          </div>
+          <div class="wa-time">19:41</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-box">
+  <div>
+    <h3>אפשר לתאם שיעור, שיחה או סדרת מפגשים</h3>
+    <p>לפי גיל, סוג מוסד, נושא, זמן ומטרת המפגש.</p>
+  </div>
+  <a class="btn" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור" target="_blank" rel="noopener">לתיאום בוואטסאפ</a>
 </div>
-  </section>
 
-  <div class="cta-box">
-    <div>
-      <h3>אפשר לתאם שיעור, שיחה או סדרת מפגשים</h3>
-      <p>לפי גיל, סוג מוסד, נושא, זמן ומטרת המפגש.</p>
-    </div>
-    <a class="btn" href="https://wa.me/972506514877">לתיאום בוואטסאפ</a>
+<div class="footer">
+  <h2>יצירת קשר</h2>
+  <div class="contact-buttons">
+    <a class="contact-btn" href="tel:0506514877">📞 טלפון</a>
+    <a class="contact-btn" href="mailto:omerymh@gmail.com">✉️ אימייל</a>
+    <a class="contact-btn whatsapp" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור" target="_blank" rel="noopener">💬 וואטסאפ</a>
+    <a class="contact-btn whatsapp-group" href="https://chat.whatsapp.com/JGj09wdlTiJ3cMpGr6zgpg" target="_blank" rel="noopener">👥 קבוצת הווטסאפ</a>
+    <a class="contact-btn youtube" href="https://www.youtube.com/channel/UCoONLBLnKT7vPF-z7Z2IT7g" target="_blank" rel="noopener">▶ ערוץ היוטיוב</a>
   </div>
+</div>
 
-  <div class="footer">
-    <h2>יצירת קשר</h2>
-    <div class="contact-buttons">
-      <a class="contact-btn" href="tel:0506514877">📞 טלפון</a>
-      <a class="contact-btn" href="mailto:omerymh@gmail.com">✉️ אימייל</a>
-      <a class="contact-btn whatsapp" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור">💬 וואטסאפ</a>
+<div class="image-modal" id="imageModal" aria-hidden="true">
+  <div class="image-modal-dialog">
+    <button class="image-modal-close" id="imageModalClose" aria-label="סגירה">×</button>
+    <button class="image-modal-nav prev" id="imageModalPrev" aria-label="הקודם">›</button>
+    <button class="image-modal-nav next" id="imageModalNext" aria-label="הבא">‹</button>
+    <div class="image-modal-content">
+      <img id="imageModalImg" src="" alt="תמונה מוגדלת">
     </div>
+    <div class="image-modal-counter" id="imageModalCounter">1 / 1</div>
   </div>
+</div>
 
 <script>
 const galleryImages = [
@@ -1198,6 +1488,12 @@ const galleryImages = [
   "img5.jpg",
   "img6.jpg",
   "img7.jpg"
+];
+
+const flyerImages = [
+  { src: "flyer1.jpg", alt: "פלייר 1" },
+  { src: "flyer2.jpg", alt: "פלייר 2" },
+  { src: "flyer3.jpg", alt: "פלייר 3" }
 ];
 
 let currentIndex = 1;
@@ -1217,6 +1513,10 @@ function updateGallery(){
   imgCenter.src = galleryImages[currentIndex];
   imgRight.src = galleryImages[rightIndex];
 
+  imgLeft.dataset.index = leftIndex;
+  imgCenter.dataset.index = currentIndex;
+  imgRight.dataset.index = rightIndex;
+
   showcaseBg.style.backgroundImage = "url('" + galleryImages[currentIndex] + "')";
 }
 
@@ -1229,6 +1529,7 @@ nextBtn.addEventListener("click", function(){
   currentIndex = (currentIndex + 1) % galleryImages.length;
   updateGallery();
 });
+
 let startX = 0;
 let currentX = 0;
 let isDragging = false;
@@ -1245,10 +1546,8 @@ showcase.addEventListener("touchstart", function(e){
 
 showcase.addEventListener("touchmove", function(e){
   if(!isDragging) return;
-
   currentX = e.touches[0].clientX;
   const diff = currentX - startX;
-
   showcaseTrack.style.transform = `translateX(${diff}px)`;
 });
 
@@ -1257,7 +1556,6 @@ showcase.addEventListener("touchend", function(){
 
   isDragging = false;
   const diff = currentX - startX;
-
   showcaseTrack.style.transition = "transform .25s ease";
 
   if(diff < -60){
@@ -1276,6 +1574,123 @@ showcase.addEventListener("touchcancel", function(){
   showcaseTrack.style.transition = "transform .25s ease";
   showcaseTrack.style.transform = "translateX(0)";
 });
+
+/* modal logic */
+const imageModal = document.getElementById("imageModal");
+const imageModalImg = document.getElementById("imageModalImg");
+const imageModalClose = document.getElementById("imageModalClose");
+const imageModalPrev = document.getElementById("imageModalPrev");
+const imageModalNext = document.getElementById("imageModalNext");
+const imageModalCounter = document.getElementById("imageModalCounter");
+
+let activeCollection = [];
+let activeIndex = 0;
+
+function openImageModal(collection, index){
+  if(!collection || !collection.length) return;
+
+  activeCollection = collection;
+  activeIndex = index;
+
+  renderModalImage();
+  imageModal.classList.add("open");
+  imageModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+}
+
+function renderModalImage(){
+  const item = activeCollection[activeIndex];
+  if(!item) return;
+
+  imageModalImg.src = item.src;
+  imageModalImg.alt = item.alt || "תמונה מוגדלת";
+  imageModalCounter.textContent = (activeIndex + 1) + " / " + activeCollection.length;
+
+  const showNav = activeCollection.length > 1;
+  imageModalPrev.style.display = showNav ? "flex" : "none";
+  imageModalNext.style.display = showNav ? "flex" : "none";
+  imageModalCounter.style.display = showNav ? "block" : "block";
+}
+
+function closeImageModal(){
+  imageModal.classList.remove("open");
+  imageModal.setAttribute("aria-hidden", "true");
+  imageModalImg.src = "";
+  document.body.classList.remove("modal-open");
+}
+
+function goPrevModal(){
+  if(!activeCollection.length) return;
+  activeIndex = (activeIndex - 1 + activeCollection.length) % activeCollection.length;
+  renderModalImage();
+}
+
+function goNextModal(){
+  if(!activeCollection.length) return;
+  activeIndex = (activeIndex + 1) % activeCollection.length;
+  renderModalImage();
+}
+
+document.querySelectorAll(".js-open-flyer").forEach(function(link, index){
+  link.addEventListener("click", function(e){
+    e.preventDefault();
+    openImageModal(flyerImages, index);
+  });
+});
+
+document.querySelectorAll(".showcase-card").forEach(function(card){
+  card.addEventListener("click", function(){
+    const img = this.querySelector("img");
+    const index = Number(img.dataset.index || 0);
+    const collection = galleryImages.map(function(src, i){
+      return { src: src, alt: "תמונה " + (i + 1) };
+    });
+    openImageModal(collection, index);
+  });
+});
+
+imageModalClose.addEventListener("click", closeImageModal);
+imageModalPrev.addEventListener("click", goPrevModal);
+imageModalNext.addEventListener("click", goNextModal);
+
+imageModal.addEventListener("click", function(e){
+  if(e.target === imageModal){
+    closeImageModal();
+  }
+});
+
+document.addEventListener("keydown", function(e){
+  if(!imageModal.classList.contains("open")) return;
+
+  if(e.key === "Escape"){
+    closeImageModal();
+  } else if(e.key === "ArrowLeft"){
+    goNextModal();
+  } else if(e.key === "ArrowRight"){
+    goPrevModal();
+  }
+});
+
+let modalTouchStartX = 0;
+let modalTouchEndX = 0;
+
+imageModal.addEventListener("touchstart", function(e){
+  modalTouchStartX = e.changedTouches[0].clientX;
+});
+
+imageModal.addEventListener("touchend", function(e){
+  modalTouchEndX = e.changedTouches[0].clientX;
+  const diff = modalTouchEndX - modalTouchStartX;
+
+  if(Math.abs(diff) < 50) return;
+
+  if(diff < 0){
+    goNextModal();
+  } else {
+    goPrevModal();
+  }
+});
+
 updateGallery();
 </script>
 

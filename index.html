@@ -618,10 +618,11 @@ p{
 .floating-whatsapp{
   position:fixed;
   left:18px;
-  bottom:22px;
+  top:50%;
+  transform:translateY(-50%);
   z-index:99999;
-  width:66px;
-  height:66px;
+  width:78px;
+  height:78px;
   border-radius:50%;
   background:#25D366;
   color:#fff;
@@ -629,21 +630,24 @@ p{
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow:0 12px 28px rgba(0,0,0,0.24);
-  transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+  box-shadow:0 14px 32px rgba(0,0,0,0.24);
+  transition:transform .2s ease, box-shadow .2s ease;
 }
 
 .floating-whatsapp:hover{
-  transform:translateY(-2px) scale(1.04);
-  box-shadow:0 16px 34px rgba(0,0,0,0.28);
+  transform:translateY(-50%) scale(1.06);
+  box-shadow:0 18px 38px rgba(0,0,0,0.30);
 }
-  
+
 .floating-whatsapp .wa-icon{
-  width:34px;
-  height:34px;
+  width:42px;
+  height:42px;
   display:block;
 }
 
+.floating-whatsapp .wa-text{
+  display:none;
+}
 /* modal */
 .image-modal{
   position:fixed;
@@ -1106,20 +1110,25 @@ p{
     font-size:17px;
   }
 
- .floating-whatsapp{
-    left:12px;
-    bottom:16px;
-    width:60px;
-    height:60px;
-  }
-  
+.floating-whatsapp{
+  left:12px;
+  top:50%;
+  bottom:auto;
+  transform:translateY(-50%);
+  width:70px;
+  height:70px;
+}
+
+.floating-whatsapp:hover{
+  transform:translateY(-50%) scale(1.04);
+}
+
+.floating-whatsapp .wa-icon{
+  width:38px;
+  height:38px;
+}  
   .floating-whatsapp .wa-text{
     display:none;
-  }
-
-  .floating-whatsapp .wa-icon{
-    width:31px;
-    height:31px;
   }
   
   .image-modal{
@@ -1172,11 +1181,13 @@ p{
    href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור"
    target="_blank"
    rel="noopener"
-   aria-label="להזמנת שיחה בוואטסאפ">
-  <span class="wa-icon">💬</span>
-  <span class="wa-text">להזמנת שיחה</span>
+   aria-label="להזמנת שיחה בוואטסאפ"
+   title="להזמנת שיחה בוואטסאפ">
+  <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
+    <path fill="currentColor" d="M19.11 17.19c-.27-.14-1.58-.78-1.82-.87-.24-.09-.41-.14-.59.14-.18.27-.68.86-.84 1.03-.15.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.7-1.33-1.56-1.48-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.31.41-.46.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.59-1.43-.81-1.96-.21-.51-.42-.44-.59-.45h-.5c-.18 0-.45.07-.68.32-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.14.18 1.77 2.7 4.29 3.79.6.26 1.07.42 1.43.54.6.19 1.14.17 1.57.1.48-.07 1.58-.65 1.8-1.28.22-.63.22-1.17.15-1.28-.06-.11-.24-.18-.5-.32Z"/>
+    <path fill="currentColor" d="M16 3.2c-7.07 0-12.8 5.72-12.8 12.78 0 2.26.59 4.46 1.71 6.39L3.2 28.8l6.59-1.68a12.81 12.81 0 0 0 6.21 1.59h.01c7.07 0 12.79-5.73 12.79-12.79 0-3.42-1.33-6.64-3.75-9.05A12.7 12.7 0 0 0 16 3.2Zm0 23.33h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.91 1 1.04-3.81-.25-.39a10.55 10.55 0 0 1-1.63-5.64c0-5.85 4.76-10.61 10.61-10.61 2.83 0 5.48 1.1 7.48 3.1a10.5 10.5 0 0 1 3.1 7.49c0 5.85-4.76 10.61-10.61 10.61Z"/>
+  </svg>
 </a>
-
 <div class="hero">
   <div class="bsd">בס"ד</div>
 

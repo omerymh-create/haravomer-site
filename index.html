@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+
+<html dir="rtl" lang="he">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTH7CXE9CE"></script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NTH7CXE9CE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -10,13 +12,11 @@
 
   gtag('config', 'G-NTH7CXE9CE');
 </script>
-  
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>הרב עומר דודוביץ – שיעורים ושיחות</title>
-<meta property="og:image" content="https://haravomer.co.il/profile.png">
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
-
+<meta content="https://haravomer.co.il/profile.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{
   --text:#172033;
@@ -1184,330 +1184,333 @@ p{
     padding:7px 12px;
   }
 }
+
+
+/* language switcher */
+.language-switcher{
+  position:fixed;
+  top:14px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:100000;
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:8px;
+  border-radius:999px;
+  background:rgba(255,255,255,.94);
+  box-shadow:0 10px 28px rgba(0,0,0,.16);
+  backdrop-filter:blur(10px);
+}
+.lang-btn{
+  border:0;
+  border-radius:999px;
+  padding:9px 14px;
+  font:inherit;
+  font-size:14px;
+  font-weight:800;
+  color:#172033;
+  background:transparent;
+  cursor:pointer;
+  transition:.2s;
+}
+.lang-btn:hover,
+.lang-btn.active{
+  background:#172033;
+  color:#fff;
+}
+html[dir="ltr"] body,
+html[dir="ltr"] .wa-text{
+  text-align:left;
+}
+html[dir="ltr"] .bsd{
+  right:auto;
+  left:18px;
+}
+html[dir="ltr"] .wa-topbar{
+  flex-direction:row;
+}
+@media (max-width:640px){
+  .language-switcher{
+    position:relative;
+    top:auto;
+    left:auto;
+    transform:none;
+    width:calc(100% - 24px);
+    margin:12px auto 0;
+    border-radius:20px;
+  }
+  .lang-btn{
+    padding:8px 10px;
+    font-size:12px;
+  }
+}
 </style>
 </head>
-<body>
-
-<a class="floating-whatsapp"
-   href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור"
-  onclick="gtag('event','whatsapp_click')"
-   target="_blank"
-   rel="noopener"
-   aria-label="להזמנת שיחה בוואטסאפ"
-   title="להזמנת שיחה בוואטסאפ">
-  <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
-    <path fill="currentColor" d="M19.11 17.19c-.27-.14-1.58-.78-1.82-.87-.24-.09-.41-.14-.59.14-.18.27-.68.86-.84 1.03-.15.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.7-1.33-1.56-1.48-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.31.41-.46.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.59-1.43-.81-1.96-.21-.51-.42-.44-.59-.45h-.5c-.18 0-.45.07-.68.32-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.14.18 1.77 2.7 4.29 3.79.6.26 1.07.42 1.43.54.6.19 1.14.17 1.57.1.48-.07 1.58-.65 1.8-1.28.22-.63.22-1.17.15-1.28-.06-.11-.24-.18-.5-.32Z"/>
-    <path fill="currentColor" d="M16 3.2c-7.07 0-12.8 5.72-12.8 12.78 0 2.26.59 4.46 1.71 6.39L3.2 28.8l6.59-1.68a12.81 12.81 0 0 0 6.21 1.59h.01c7.07 0 12.79-5.73 12.79-12.79 0-3.42-1.33-6.64-3.75-9.05A12.7 12.7 0 0 0 16 3.2Zm0 23.33h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.91 1 1.04-3.81-.25-.39a10.55 10.55 0 0 1-1.63-5.64c0-5.85 4.76-10.61 10.61-10.61 2.83 0 5.48 1.1 7.48 3.1a10.5 10.5 0 0 1 3.1 7.49c0 5.85-4.76 10.61-10.61 10.61Z"/>
-  </svg>
+<body><div aria-label="בחירת שפה" class="language-switcher"><button class="lang-btn" data-lang="he" type="button">עברית</button><button class="lang-btn" data-lang="en" type="button">English</button><button class="lang-btn" data-lang="fr" type="button">Français</button><button class="lang-btn" data-lang="es" type="button">Español</button><button class="lang-btn" data-lang="pt" type="button">Português</button></div>
+<a aria-label="להזמנת שיחה בוואטסאפ" class="floating-whatsapp" data-i18n-aria-label="wa_aria" data-i18n-title="wa_aria" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור" onclick="gtag('event','whatsapp_click')" rel="noopener" target="_blank" title="להזמנת שיחה בוואטסאפ">
+<svg aria-hidden="true" class="wa-icon" viewbox="0 0 32 32">
+<path d="M19.11 17.19c-.27-.14-1.58-.78-1.82-.87-.24-.09-.41-.14-.59.14-.18.27-.68.86-.84 1.03-.15.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.7-1.33-1.56-1.48-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.31.41-.46.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.59-1.43-.81-1.96-.21-.51-.42-.44-.59-.45h-.5c-.18 0-.45.07-.68.32-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.14.18 1.77 2.7 4.29 3.79.6.26 1.07.42 1.43.54.6.19 1.14.17 1.57.1.48-.07 1.58-.65 1.8-1.28.22-.63.22-1.17.15-1.28-.06-.11-.24-.18-.5-.32Z" fill="currentColor"></path>
+<path d="M16 3.2c-7.07 0-12.8 5.72-12.8 12.78 0 2.26.59 4.46 1.71 6.39L3.2 28.8l6.59-1.68a12.81 12.81 0 0 0 6.21 1.59h.01c7.07 0 12.79-5.73 12.79-12.79 0-3.42-1.33-6.64-3.75-9.05A12.7 12.7 0 0 0 16 3.2Zm0 23.33h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.91 1 1.04-3.81-.25-.39a10.55 10.55 0 0 1-1.63-5.64c0-5.85 4.76-10.61 10.61-10.61 2.83 0 5.48 1.1 7.48 3.1a10.5 10.5 0 0 1 3.1 7.49c0 5.85-4.76 10.61-10.61 10.61Z" fill="currentColor"></path>
+</svg>
 </a>
 <div class="hero">
-  <div class="bsd">בס"ד</div>
-
-  <div class="hero-copy">
-    <p class="eyebrow">הרב עומר דודוביץ • שיעורים למוסדות חינוך, מדרשות, ישיבות וקהילות</p>
-    <h1>תורה עמוקה שמדברת אל החיים</h1>
-    <p>שיעורים, שיחות והרצאות שנמסרים מתוך עומק תורני, בהירות מחשבתית, חיבור לעולם הנפש ולשאלות של הדור — באופן חי, נוגע ומשמעותי.</p>
-
-    <div class="hero-actions">
-      <a class="btn" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור" target="_blank" rel="noopener">לתיאום שיעור</a>
-      <a class="btn secondary" href="#topics">לנושאים לשיעורים</a>
-      <a class="btn secondary" href="#testimonials">להמלצות</a>
-    </div>
-
-    <div class="hero-points">
-      <div class="point"><strong>עומק</strong><span>מקורות, מחשבה, תורת הרב קוק ושאלות היסוד באמונה.</span></div>
-      <div class="point"><strong>חיבור</strong><span>מפגש אמיתי עם עולמם של תלמידים, בוגרים וצוותים חינוכיים.</span></div>
-      <div class="point"><strong>השפעה</strong><span>שיעור שנוגע בזמן אמת וממשיך ללוות גם אחר כך.</span></div>
-    </div>
-  </div>
-
-  <div class="hero-media">
-    <div class="hero-media-card">
-      <img src="profile.png" alt="הרב עומר דודוביץ">
-      <div class="image-caption">
-        <div class="title">הרב עומר דודוביץ</div>
-        <div class="sub">שיעורים, שיחות והרצאות למוסדות חינוך, בוגרים ולנוער</div>
-      </div>
-    </div>
-  </div>
+<div class="bsd">בס"ד</div>
+<div class="hero-copy">
+<p class="eyebrow" data-i18n="hero_eyebrow">הרב עומר דודוביץ • שיעורים למוסדות חינוך, מדרשות, ישיבות וקהילות</p>
+<h1 data-i18n="hero_title">תורה עמוקה שמדברת אל החיים</h1>
+<p data-i18n="hero_intro">שיעורים, שיחות והרצאות שנמסרים מתוך עומק תורני, בהירות מחשבתית, חיבור לעולם הנפש ולשאלות של הדור — באופן חי, נוגע ומשמעותי.</p>
+<div class="hero-actions">
+<a class="btn" data-i18n="book_lesson" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור" rel="noopener" target="_blank">לתיאום שיעור</a>
+<a class="btn secondary" data-i18n="topics_button" href="#topics">לנושאים לשיעורים</a>
+<a class="btn secondary" data-i18n="testimonials_button" href="#testimonials">להמלצות</a>
 </div>
-
-  <section class="section">
-  <div class="section-head">
-    <h2>לכבוד פתיחת האתר – משוב שהתקבל כעת מתלמיד:</h2>
-  </div>
-
+<div class="hero-points">
+<div class="point"><strong data-i18n="depth">עומק</strong><span data-i18n="depth_desc">מקורות, מחשבה, תורת הרב קוק ושאלות היסוד באמונה.</span></div>
+<div class="point"><strong data-i18n="connection">חיבור</strong><span data-i18n="connection_desc">מפגש אמיתי עם עולמם של תלמידים, בוגרים וצוותים חינוכיים.</span></div>
+<div class="point"><strong data-i18n="impact">השפעה</strong><span data-i18n="impact_desc">שיעור שנוגע בזמן אמת וממשיך ללוות גם אחר כך.</span></div>
+</div>
+</div>
+<div class="hero-media">
+<div class="hero-media-card">
+<img alt="הרב עומר דודוביץ" src="profile.png"/>
+<div class="image-caption">
+<div class="title" data-i18n="rabbi_name">הרב עומר דודוביץ</div>
+<div class="sub" data-i18n="caption_sub">שיעורים, שיחות והרצאות למוסדות חינוך, בוגרים ולנוער</div>
+</div>
+</div>
+</div>
+</div>
+<section class="section">
+<div class="section-head">
+<h2 data-i18n="opening_feedback">לכבוד פתיחת האתר – משוב שהתקבל כעת מתלמיד:</h2>
+</div>
 <div class="hero-media" style="max-width:500px; margin:0 auto 60px;">
-  <div class="hero-media-card">
-      <img src="new-feedback.jpeg" alt="משוב מתלמיד לכבוד פתיחת האתר">
-    </div>
-  </div>
+<div class="hero-media-card">
+<img alt="משוב מתלמיד לכבוד פתיחת האתר" src="new-feedback.jpeg"/>
+</div>
+</div>
 </section>
-  
 <section class="gallery-section">
-  <div class="gallery-head">
-    <h2>שיעורים והרצאות</h2>
-    <p>מבחר תמונות מתוך שיעורים, שיחות ומפגשים עם קהלים שונים.</p>
-  </div>
-
-  <div class="showcase">
-    <div class="showcase-bg" id="showcaseBg"></div>
-    <div class="showcase-overlay"></div>
-
-    <button class="showcase-arrow prev" id="prevBtn" aria-label="הקודם">‹</button>
-    <button class="showcase-arrow next" id="nextBtn" aria-label="הבא">›</button>
-
-    <div class="showcase-inner">
-      <div class="showcase-track">
-        <div class="showcase-card" id="cardLeft">
-          <img id="imgLeft" src="img1.jpg" alt="שיעור">
-        </div>
-        <div class="showcase-card center" id="cardCenter">
-          <img id="imgCenter" src="img2.jpg" alt="שיעור">
-        </div>
-        <div class="showcase-card" id="cardRight">
-          <img id="imgRight" src="img3.jpg" alt="שיעור">
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="gallery-head">
+<h2 data-i18n="gallery_title">שיעורים והרצאות</h2>
+<p data-i18n="gallery_desc">מבחר תמונות מתוך שיעורים, שיחות ומפגשים עם קהלים שונים.</p>
+</div>
+<div class="showcase">
+<div class="showcase-bg" id="showcaseBg"></div>
+<div class="showcase-overlay"></div>
+<button aria-label="הקודם" class="showcase-arrow prev" data-i18n-aria-label="previous" id="prevBtn">‹</button>
+<button aria-label="הבא" class="showcase-arrow next" data-i18n-aria-label="next" id="nextBtn">›</button>
+<div class="showcase-inner">
+<div class="showcase-track">
+<div class="showcase-card" id="cardLeft">
+<img alt="שיעור" id="imgLeft" src="img1.jpg"/>
+</div>
+<div class="showcase-card center" id="cardCenter">
+<img alt="שיעור" id="imgCenter" src="img2.jpg"/>
+</div>
+<div class="showcase-card" id="cardRight">
+<img alt="שיעור" id="imgRight" src="img3.jpg"/>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <div class="section">
-  <div class="section-head">
-    <h2>שיעורים לצפייה</h2>
-    <p>מבחר שיעורים לצפייה ישירה מתוך ערוץ היוטיוב.</p>
-  </div>
-
-  <div class="cards video-cards">
-    <div class="card">
-      <iframe width="100%" height="300"
-      src="https://www.youtube.com/embed/ONjDQMLj9ew"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-      <h3>?איך מתכוננים לפורים</h3>
-    </div>
-
-    <div class="card">
-      <iframe width="100%" height="300"
-      src="https://www.youtube.com/embed/TZvQNtapAAg"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-      <h3>למה נבראנו?</h3>
-    </div>
-
-    <div class="card">
-      <iframe width="100%" height="300"
-      src="https://www.youtube.com/embed/SBTFkWPVbVc"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-      <h3>מה יותר אוהבים את הדומה או את השונה</h3>
-    </div>
-
-    <div class="card">
-      <iframe width="100%" height="300"
-      src="https://www.youtube.com/embed/kzd-cu7TUyw"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-      <h3>שיעור מתוך מכון אורה</h3>
-    </div>
-  </div>
+<div class="section-head">
+<h2 data-i18n="watch_title">שיעורים לצפייה</h2>
+<p data-i18n="watch_desc">מבחר שיעורים לצפייה ישירה מתוך ערוץ היוטיוב.</p>
 </div>
-
+<div class="cards video-cards">
+<div class="card">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="300" src="https://www.youtube.com/embed/ONjDQMLj9ew" title="YouTube video player" width="100%"></iframe>
+<h3 data-i18n="video1">?איך מתכוננים לפורים</h3>
+</div>
+<div class="card">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="300" src="https://www.youtube.com/embed/TZvQNtapAAg" title="YouTube video player" width="100%"></iframe>
+<h3 data-i18n="video2">למה נבראנו?</h3>
+</div>
+<div class="card">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="300" src="https://www.youtube.com/embed/SBTFkWPVbVc" title="YouTube video player" width="100%"></iframe>
+<h3 data-i18n="video3">מה יותר אוהבים את הדומה או את השונה</h3>
+</div>
+<div class="card">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="300" src="https://www.youtube.com/embed/kzd-cu7TUyw" title="YouTube video player" width="100%"></iframe>
+<h3 data-i18n="video4">שיעור מתוך מכון אורה</h3>
+</div>
+</div>
+</div>
 <div class="section" id="topics">
-  <div class="section-head">
-    <h2>נושאים לשיעורים</h2>
-    <p>אפשר להזמין שיעור חד־פעמי, סדרת מפגשים, ערב חיזוק או נושא מותאם במיוחד לקהל.</p>
-  </div>
-
-  <div class="cards">
-    <div class="card"><h3>בניין האישיות</h3><p>איך להתמודד עם קנאה, כעס ועצלות ולבנות אישיות חזקה, מאירה ובריאה.</p></div>
-    <div class="card"><h3>תורת הרב קוק</h3><p>עומק תפיסת הגאולה והחזון של עם ישראל, תורת ישראל וארץ ישראל.</p></div>
-    <div class="card"><h3>בירור האמונה</h3><p>תשובות לשאלות היסוד באמונה וביסוס אמונת ישראל באופן בהיר ובנוי.</p></div>
-    <div class="card"><h3>עבודת המועדים</h3><p>שיחות עומק לקראת חגי ישראל והמשמעות הפנימית שלהם לחיים.</p></div>
-    <div class="card"><h3>דור הגאולה</h3><p>המשמעות של החיים בדור שלנו, האחריות שלנו והזכות להיות חלק מהמהלך.</p></div>
-    <div class="card"><h3>זוגיות ובניין הבית</h3><p>שיחות לבוגרים על זוגיות, פגישות ובניין הבית מתוך בשלות ואמונה.</p></div>
-  </div>
-
-  <div class="flyers-section">
-    <div class="flyers-title">פליירים לדוגמה</div>
-    <p class="flyers-subtitle">מבחר פליירים מתוך שיעורים, סדרות והרצאות.</p>
-
-    <div class="flyers-stack">
-      <a href="flyer1.jpeg" class="flyer-card js-open-flyer" data-image="flyer1.jpeg" aria-label="עושים סדר">
-        <img src="flyer1.jpeg" alt="פלייר 1">
-      </a>
-
-      <a href="flyer2.jpeg" class="flyer-card js-open-flyer" data-image="flyer2.jpeg" aria-label="לימי הגאולה">
-        <img src="flyer2.jpeg" alt="פלייר 2">
-      </a>
-
-      <a href="flyer3.jpeg" class="flyer-card js-open-flyer" data-image="flyer3.jpeg" aria-label="תעצומות אמונה במלחמה">
-        <img src="flyer3.jpeg" alt="פלייר 3">
-      </a>
-    </div>
-  </div>
+<div class="section-head">
+<h2 data-i18n="topics_title">נושאים לשיעורים</h2>
+<p data-i18n="topics_desc">אפשר להזמין שיעור חד־פעמי, סדרת מפגשים, ערב חיזוק או נושא מותאם במיוחד לקהל.</p>
 </div>
-
+<div class="cards">
+<div class="card"><h3 data-i18n="topic1">בניין האישיות</h3><p data-i18n="topic1_desc">איך להתמודד עם קנאה, כעס ועצלות ולבנות אישיות חזקה, מאירה ובריאה.</p></div>
+<div class="card"><h3 data-i18n="topic2">תורת הרב קוק</h3><p data-i18n="topic2_desc">עומק תפיסת הגאולה והחזון של עם ישראל, תורת ישראל וארץ ישראל.</p></div>
+<div class="card"><h3 data-i18n="topic3">בירור האמונה</h3><p data-i18n="topic3_desc">תשובות לשאלות היסוד באמונה וביסוס אמונת ישראל באופן בהיר ובנוי.</p></div>
+<div class="card"><h3 data-i18n="topic4">עבודת המועדים</h3><p data-i18n="topic4_desc">שיחות עומק לקראת חגי ישראל והמשמעות הפנימית שלהם לחיים.</p></div>
+<div class="card"><h3 data-i18n="topic5">דור הגאולה</h3><p data-i18n="topic5_desc">המשמעות של החיים בדור שלנו, האחריות שלנו והזכות להיות חלק מהמהלך.</p></div>
+<div class="card"><h3 data-i18n="topic6">זוגיות ובניין הבית</h3><p data-i18n="topic6_desc">שיחות לבוגרים על זוגיות, פגישות ובניין הבית מתוך בשלות ואמונה.</p></div>
+</div>
+<div class="flyers-section">
+<div class="flyers-title" data-i18n="flyers_title">פליירים לדוגמה</div>
+<p class="flyers-subtitle" data-i18n="flyers_desc">מבחר פליירים מתוך שיעורים, סדרות והרצאות.</p>
+<div class="flyers-stack">
+<a aria-label="עושים סדר" class="flyer-card js-open-flyer" data-image="flyer1.jpeg" href="flyer1.jpeg">
+<img alt="פלייר 1" src="flyer1.jpeg"/>
+</a>
+<a aria-label="לימי הגאולה" class="flyer-card js-open-flyer" data-image="flyer2.jpeg" href="flyer2.jpeg">
+<img alt="פלייר 2" src="flyer2.jpeg"/>
+</a>
+<a aria-label="תעצומות אמונה במלחמה" class="flyer-card js-open-flyer" data-image="flyer3.jpeg" href="flyer3.jpeg">
+<img alt="פלייר 3" src="flyer3.jpeg"/>
+</a>
+</div>
+</div>
+</div>
 <section class="testimonials-whatsapp" id="testimonials">
-  <div class="section-head">
-    <h2>משובים מתלמידים</h2>
-    <p>כמה תגובות נבחרות מתוך משובים שנשלחו אחרי שיעורים ושיחות.</p>
-  </div>
-
-  <div class="wa-grid">
-    <div class="wa-phone short">
-      <div class="wa-topbar">
-        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-        <div class="wa-top-title">יעל מכון אורה</div>
-      </div>
-      <div class="wa-screen">
-        <div class="wa-msg">
-          <div class="wa-text">
-            יש פעמים שאני מגיעה למדרשה במיוחד לשיעורים האלו, וכולנו נהנות מאוד מאוד מהשיעורים.<br>
-            כל שיעור שהרב מעביר עוצמתי במפגש שלו בחיי היום יום, ואצלי אישית מתחיל ביישום עוד בזמן השיעור!<br>
-            <br><br>תודה רבה
+<div class="section-head">
+<h2 data-i18n="feedback_title">משובים מתלמידים</h2>
+<p data-i18n="feedback_desc">כמה תגובות נבחרות מתוך משובים שנשלחו אחרי שיעורים ושיחות.</p>
+</div>
+<div class="wa-grid">
+<div class="wa-phone short">
+<div class="wa-topbar">
+<div class="wa-top-icons">☎︎   ⌕</div>
+<div class="wa-top-title" data-i18n="wa_name1">יעל מכון אורה</div>
+</div>
+<div class="wa-screen">
+<div class="wa-msg">
+<div class="wa-text" data-i18n-html="feedback1">
+            יש פעמים שאני מגיעה למדרשה במיוחד לשיעורים האלו, וכולנו נהנות מאוד מאוד מהשיעורים.<br/>
+            כל שיעור שהרב מעביר עוצמתי במפגש שלו בחיי היום יום, ואצלי אישית מתחיל ביישום עוד בזמן השיעור!<br/>
+<br/><br/>תודה רבה
           </div>
-          <div class="wa-time">23:07</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="wa-phone long">
-      <div class="wa-topbar">
-        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-        <div class="wa-top-title">שרה מכון אורה</div>
-      </div>
-      <div class="wa-screen">
-        <div class="wa-msg">
-          <div class="wa-text">
-            שלום, רציתי להודות לך על כל השיעורים!!<br><br>
-            כל שבוע חיכיתי לשיעורים שלך וזה נתן לי כח וחיזק אותי לכל השבוע ולכל החיים!!<br><br>
-            תמיד שאלת שאלות ממש טובות וכל פעם נתת תשובות שהיו חדשות בשבילי,<br><br>
+<div class="wa-time">23:07</div>
+</div>
+</div>
+</div>
+<div class="wa-phone long">
+<div class="wa-topbar">
+<div class="wa-top-icons">☎︎   ⌕</div>
+<div class="wa-top-title" data-i18n="wa_name2">שרה מכון אורה</div>
+</div>
+<div class="wa-screen">
+<div class="wa-msg">
+<div class="wa-text" data-i18n-html="feedback2">
+            שלום, רציתי להודות לך על כל השיעורים!!<br/><br/>
+            כל שבוע חיכיתי לשיעורים שלך וזה נתן לי כח וחיזק אותי לכל השבוע ולכל החיים!!<br/><br/>
+            תמיד שאלת שאלות ממש טובות וכל פעם נתת תשובות שהיו חדשות בשבילי,<br/><br/>
             אז שוב תודה רבה.
           </div>
-          <div class="wa-time">20:33</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="wa-phone short">
-      <div class="wa-topbar">
-        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-        <div class="wa-top-title">רכזת חברתית אולפנת ראשית</div>
-      </div>
-      <div class="wa-screen">
-        <div class="wa-msg">
-          <div class="wa-text">
-            ערב טוב הרב<br>
-            הבנות מאוד מאוד נהנו בשיחה ושמחו ממנה,<br>
-            ביקשו שהרב יגיע שוב. אשמח שנתאם עוד בע"ה.<br>
+<div class="wa-time">20:33</div>
+</div>
+</div>
+</div>
+<div class="wa-phone short">
+<div class="wa-topbar">
+<div class="wa-top-icons">☎︎   ⌕</div>
+<div class="wa-top-title" data-i18n="wa_name3">רכזת חברתית אולפנת ראשית</div>
+</div>
+<div class="wa-screen">
+<div class="wa-msg">
+<div class="wa-text" data-i18n-html="feedback3">
+            ערב טוב הרב<br/>
+            הבנות מאוד מאוד נהנו בשיחה ושמחו ממנה,<br/>
+            ביקשו שהרב יגיע שוב. אשמח שנתאם עוד בע"ה.<br/>
             תודה!
           </div>
-          <div class="wa-time">21:18</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="wa-phone short">
-      <div class="wa-topbar">
-        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-        <div class="wa-top-title">תלמידה מדרשת שלהבת הנשמה</div>
-      </div>
-      <div class="wa-screen">
-        <div class="wa-msg">
-          <div class="wa-text">
-            הרב אני זוכרת ממש לטובה את השיעור של פורים שעבר<br>
-            זה היה השיעור הראשון שלי במדרשה<br>
-            שמעתי אותו אחר כך ארבע פעמים.<br>
+<div class="wa-time">21:18</div>
+</div>
+</div>
+</div>
+<div class="wa-phone short">
+<div class="wa-topbar">
+<div class="wa-top-icons">☎︎   ⌕</div>
+<div class="wa-top-title" data-i18n="wa_name4">תלמידה מדרשת שלהבת הנשמה</div>
+</div>
+<div class="wa-screen">
+<div class="wa-msg">
+<div class="wa-text" data-i18n-html="feedback4">
+            הרב אני זוכרת ממש לטובה את השיעור של פורים שעבר<br/>
+            זה היה השיעור הראשון שלי במדרשה<br/>
+            שמעתי אותו אחר כך ארבע פעמים.<br/>
             אשריכם ישראל
           </div>
-          <div class="wa-time">20:33</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="wa-phone long">
-      <div class="wa-topbar">
-        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-        <div class="wa-top-title">תורה נוער אלקנה</div>
-      </div>
-      <div class="wa-screen">
-        <div class="wa-msg">
-          <div class="wa-text">
-            ערב טוב הרב,<br>
-            רציתי להגיד תודה רבה על השיעור שהרב העביר. זה היה ממש מעמיק, נוגע ומחובר לעולם של הנוער.<br>
-            הרגשתי שיש מקום לשאלות, למחשבות, ולא רק לשמוע אלא גם להתחבר באמת למה שנאמר.<br><br>
-            הרבה נערים ונערות יצאו מהשיעור עם נקודות למחשבה, והיה אפשר לראות שזה נגע בהם.<br>
-            זה לא מובן מאליו, וזה לגמרי השאיר חותם.<br>
-            מקווה שתהיה עוד הזדמנות לשיעורים כאלה!<br>
+<div class="wa-time">20:33</div>
+</div>
+</div>
+</div>
+<div class="wa-phone long">
+<div class="wa-topbar">
+<div class="wa-top-icons">☎︎   ⌕</div>
+<div class="wa-top-title" data-i18n="wa_name5">תורה נוער אלקנה</div>
+</div>
+<div class="wa-screen">
+<div class="wa-msg">
+<div class="wa-text" data-i18n-html="feedback5">
+            ערב טוב הרב,<br/>
+            רציתי להגיד תודה רבה על השיעור שהרב העביר. זה היה ממש מעמיק, נוגע ומחובר לעולם של הנוער.<br/>
+            הרגשתי שיש מקום לשאלות, למחשבות, ולא רק לשמוע אלא גם להתחבר באמת למה שנאמר.<br/><br/>
+            הרבה נערים ונערות יצאו מהשיעור עם נקודות למחשבה, והיה אפשר לראות שזה נגע בהם.<br/>
+            זה לא מובן מאליו, וזה לגמרי השאיר חותם.<br/>
+            מקווה שתהיה עוד הזדמנות לשיעורים כאלה!<br/>
             תודה גדולה הרב!
           </div>
-          <div class="wa-time">20:45</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="wa-phone long">
-      <div class="wa-topbar">
-        <div class="wa-top-icons">☎︎ &nbsp; ⌕</div>
-        <div class="wa-top-title">בת חן מדרשת אורות אביטל ברחובות</div>
-      </div>
-      <div class="wa-screen">
-        <div class="wa-msg">
-          <div class="wa-text">
-            שלום הרב עומר,<br>
-            אשמח לשתף ולהודות על השיעורים במהלך השנתיים האחרונות.<br>
-            השיעורים תמיד גורמים לי לעצור ולחשוב, להעמיק ולקבל זווית ראייה חדשה.<br><br>
-            אני מאוד מתחברת לדרך הלימוד שמשלבת לימוד ברמה גבוהה עם חיבור משמעותי לחיים.<br><br>
+<div class="wa-time">20:45</div>
+</div>
+</div>
+</div>
+<div class="wa-phone long">
+<div class="wa-topbar">
+<div class="wa-top-icons">☎︎   ⌕</div>
+<div class="wa-top-title" data-i18n="wa_name6">בת חן מדרשת אורות אביטל ברחובות</div>
+</div>
+<div class="wa-screen">
+<div class="wa-msg">
+<div class="wa-text" data-i18n-html="feedback6">
+            שלום הרב עומר,<br/>
+            אשמח לשתף ולהודות על השיעורים במהלך השנתיים האחרונות.<br/>
+            השיעורים תמיד גורמים לי לעצור ולחשוב, להעמיק ולקבל זווית ראייה חדשה.<br/><br/>
+            אני מאוד מתחברת לדרך הלימוד שמשלבת לימוד ברמה גבוהה עם חיבור משמעותי לחיים.<br/><br/>
             תודה רבה!
           </div>
-          <div class="wa-time">19:41</div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="wa-time">19:41</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <div class="cta-box">
-  <div>
-    <h3>אפשר לתאם שיעור, שיחה או סדרת מפגשים</h3>
-    <p>לפי גיל, סוג מוסד, נושא, זמן ומטרת המפגש.</p>
-  </div>
-  <a class="btn" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור" target="_blank" rel="noopener">לתיאום בוואטסאפ</a>
+<div>
+<h3 data-i18n="cta_title">אפשר לתאם שיעור, שיחה או סדרת מפגשים</h3>
+<p data-i18n="cta_desc">לפי גיל, סוג מוסד, נושא, זמן ומטרת המפגש.</p>
 </div>
-
+<a class="btn" data-i18n="cta_btn" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור" rel="noopener" target="_blank">לתיאום בוואטסאפ</a>
+</div>
 <div class="footer">
-  <h2>יצירת קשר</h2>
-  <div class="contact-buttons">
-    <a class="contact-btn" href="tel:0506514877">📞 טלפון</a>
-    <a class="contact-btn" href="mailto:omerymh@gmail.com">✉️ אימייל</a>
-    <a class="contact-btn whatsapp" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור" target="_blank" rel="noopener">💬 וואטסאפ</a>
-    <a class="contact-btn whatsapp-group" href="https://chat.whatsapp.com/JGj09wdlTiJ3cMpGr6zgpg" target="_blank" rel="noopener">👥 קבוצת הווטסאפ</a>
-    <a class="contact-btn youtube" href="https://www.youtube.com/channel/UCoONLBLnKT7vPF-z7Z2IT7g" target="_blank" rel="noopener">▶ ערוץ היוטיוב</a>
-  </div>
+<h2 data-i18n="contact_title">יצירת קשר</h2>
+<div class="contact-buttons">
+<a class="contact-btn" data-i18n="phone" href="tel:0506514877">📞 טלפון</a>
+<a class="contact-btn" data-i18n="email" href="mailto:omerymh@gmail.com">✉️ אימייל</a>
+<a class="contact-btn whatsapp" data-i18n="whatsapp" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור" rel="noopener" target="_blank">💬 וואטסאפ</a>
+<a class="contact-btn whatsapp-group" data-i18n="whatsapp_group" href="https://chat.whatsapp.com/JGj09wdlTiJ3cMpGr6zgpg" rel="noopener" target="_blank">👥 קבוצת הווטסאפ</a>
+<a class="contact-btn youtube" data-i18n="youtube" href="https://www.youtube.com/channel/UCoONLBLnKT7vPF-z7Z2IT7g" rel="noopener" target="_blank">▶ ערוץ היוטיוב</a>
 </div>
-
-<div class="image-modal" id="imageModal" aria-hidden="true">
-  <div class="image-modal-dialog">
-    <button class="image-modal-close" id="imageModalClose" aria-label="סגירה">×</button>
-    <button class="image-modal-nav prev" id="imageModalPrev" aria-label="הקודם">›</button>
-    <button class="image-modal-nav next" id="imageModalNext" aria-label="הבא">‹</button>
-    <div class="image-modal-content">
-      <img id="imageModalImg" src="" alt="תמונה מוגדלת">
-    </div>
-    <div class="image-modal-counter" id="imageModalCounter">1 / 1</div>
-  </div>
 </div>
-
+<div aria-hidden="true" class="image-modal" id="imageModal">
+<div class="image-modal-dialog">
+<button aria-label="סגירה" class="image-modal-close" data-i18n-aria-label="close" id="imageModalClose">×</button>
+<button aria-label="הקודם" class="image-modal-nav prev" data-i18n-aria-label="previous" id="imageModalPrev">›</button>
+<button aria-label="הבא" class="image-modal-nav next" data-i18n-aria-label="next" id="imageModalNext">‹</button>
+<div class="image-modal-content">
+<img alt="תמונה מוגדלת" id="imageModalImg" src=""/>
+</div>
+<div class="image-modal-counter" id="imageModalCounter">1 / 1</div>
+</div>
+</div>
 <script>
 const galleryImages = [
   "img1.jpg",
@@ -1723,5 +1726,49 @@ imageModal.addEventListener("touchend", function(e){
 updateGallery();
 </script>
 
+<script>
+const siteTranslations = {"he": {"hero_eyebrow": "הרב עומר דודוביץ • שיעורים למוסדות חינוך, מדרשות, ישיבות וקהילות", "hero_title": "תורה עמוקה שמדברת אל החיים", "hero_intro": "שיעורים, שיחות והרצאות שנמסרים מתוך עומק תורני, בהירות מחשבתית, חיבור לעולם הנפש ולשאלות של הדור — באופן חי, נוגע ומשמעותי.", "book_lesson": "לתיאום שיעור", "topics_button": "לנושאים לשיעורים", "testimonials_button": "להמלצות", "depth": "עומק", "depth_desc": "מקורות, מחשבה, תורת הרב קוק ושאלות היסוד באמונה.", "connection": "חיבור", "connection_desc": "מפגש אמיתי עם עולמם של תלמידים, בוגרים וצוותים חינוכיים.", "impact": "השפעה", "impact_desc": "שיעור שנוגע בזמן אמת וממשיך ללוות גם אחר כך.", "rabbi_name": "הרב עומר דודוביץ", "caption_sub": "שיעורים, שיחות והרצאות למוסדות חינוך, בוגרים ולנוער", "opening_feedback": "לכבוד פתיחת האתר – משוב שהתקבל כעת מתלמיד:", "gallery_title": "שיעורים והרצאות", "gallery_desc": "מבחר תמונות מתוך שיעורים, שיחות ומפגשים עם קהלים שונים.", "watch_title": "שיעורים לצפייה", "watch_desc": "מבחר שיעורים לצפייה ישירה מתוך ערוץ היוטיוב.", "video1": "איך מתכוננים לפורים?", "video2": "למה נבראנו?", "video3": "מה יותר אוהבים: את הדומה או את השונה?", "video4": "שיעור מתוך מכון אורה", "topics_title": "נושאים לשיעורים", "topics_desc": "אפשר להזמין שיעור חד־פעמי, סדרת מפגשים, ערב חיזוק או נושא מותאם במיוחד לקהל.", "topic1": "בניין האישיות", "topic1_desc": "איך להתמודד עם קנאה, כעס ועצלות ולבנות אישיות חזקה, מאירה ובריאה.", "topic2": "תורת הרב קוק", "topic2_desc": "עומק תפיסת הגאולה והחזון של עם ישראל, תורת ישראל וארץ ישראל.", "topic3": "בירור האמונה", "topic3_desc": "תשובות לשאלות היסוד באמונה וביסוס אמונת ישראל באופן בהיר ובנוי.", "topic4": "עבודת המועדים", "topic4_desc": "שיחות עומק לקראת חגי ישראל והמשמעות הפנימית שלהם לחיים.", "topic5": "דור הגאולה", "topic5_desc": "המשמעות של החיים בדור שלנו, האחריות שלנו והזכות להיות חלק מהמהלך.", "topic6": "זוגיות ובניין הבית", "topic6_desc": "שיחות לבוגרים על זוגיות, פגישות ובניין הבית מתוך בשלות ואמונה.", "flyers_title": "פליירים לדוגמה", "flyers_desc": "מבחר פליירים מתוך שיעורים, סדרות והרצאות.", "feedback_title": "משובים מתלמידים", "feedback_desc": "כמה תגובות נבחרות מתוך משובים שנשלחו אחרי שיעורים ושיחות.", "cta_title": "אפשר לתאם שיעור, שיחה או סדרת מפגשים", "cta_desc": "לפי גיל, סוג מוסד, נושא, זמן ומטרת המפגש.", "cta_btn": "לתיאום בוואטסאפ", "contact_title": "יצירת קשר", "phone": "📞 טלפון", "email": "✉️ אימייל", "whatsapp": "💬 וואטסאפ", "whatsapp_group": "👥 קבוצת הווטסאפ", "youtube": "▶ ערוץ היוטיוב", "wa_name1": "יעל מכון אורה", "wa_name2": "שרה מכון אורה", "wa_name3": "רכזת חברתית אולפנת ראשית", "wa_name4": "תלמידה מדרשת שלהבת הנשמה", "wa_name5": "תורה נוער אלקנה", "wa_name6": "בת חן מדרשת אורות אביטל ברחובות", "wa_aria": "להזמנת שיחה בוואטסאפ", "previous": "הקודם", "next": "הבא", "close": "סגירה", "feedback1": "יש פעמים שאני מגיעה למדרשה במיוחד לשיעורים האלו, וכולנו נהנות מאוד מאוד מהשיעורים.<br>כל שיעור שהרב מעביר עוצמתי במפגש שלו בחיי היום יום, ואצלי אישית מתחיל ביישום עוד בזמן השיעור!<br><br><br>תודה רבה", "feedback2": "שלום, רציתי להודות לך על כל השיעורים!!<br><br>כל שבוע חיכיתי לשיעורים שלך וזה נתן לי כח וחיזק אותי לכל השבוע ולכל החיים!!<br><br>תמיד שאלת שאלות ממש טובות וכל פעם נתת תשובות שהיו חדשות בשבילי,<br><br>אז שוב תודה רבה.", "feedback3": "ערב טוב הרב<br>הבנות מאוד מאוד נהנו בשיחה ושמחו ממנה,<br>ביקשו שהרב יגיע שוב. אשמח שנתאם עוד בע״ה.<br>תודה!", "feedback4": "הרב אני זוכרת ממש לטובה את השיעור של פורים שעבר<br>זה היה השיעור הראשון שלי במדרשה<br>שמעתי אותו אחר כך ארבע פעמים.<br>אשריכם ישראל", "feedback5": "ערב טוב הרב,<br>רציתי להגיד תודה רבה על השיעור שהרב העביר. זה היה ממש מעמיק, נוגע ומחובר לעולם של הנוער.<br>הרגשתי שיש מקום לשאלות, למחשבות, ולא רק לשמוע אלא גם להתחבר באמת למה שנאמר.<br><br>הרבה נערים ונערות יצאו מהשיעור עם נקודות למחשבה, והיה אפשר לראות שזה נגע בהם.<br>זה לא מובן מאליו, וזה לגמרי השאיר חותם.<br>מקווה שתהיה עוד הזדמנות לשיעורים כאלה!<br>תודה גדולה הרב!", "feedback6": "שלום הרב עומר,<br>אשמח לשתף ולהודות על השיעורים במהלך השנתיים האחרונות.<br>השיעורים תמיד גורמים לי לעצור ולחשוב, להעמיק ולקבל זווית ראייה חדשה.<br><br>אני מאוד מתחברת לדרך הלימוד שמשלבת לימוד ברמה גבוהה עם חיבור משמעותי לחיים.<br><br>תודה רבה!"}, "en": {"hero_eyebrow": "Rabbi Omer Davidovitz • Torah classes for schools, seminaries, yeshivot and communities", "hero_title": "Deep Torah that speaks to life", "hero_intro": "Torah classes, talks and lectures rooted in depth, clarity of thought, insight into the human spirit and the questions of our generation — presented in a lively, meaningful and engaging way.", "book_lesson": "Book a class", "topics_button": "Class topics", "testimonials_button": "Testimonials", "depth": "Depth", "depth_desc": "Sources, Jewish thought, the teachings of Rabbi Kook and fundamental questions of faith.", "connection": "Connection", "connection_desc": "A genuine encounter with the world of students, adults and educational teams.", "impact": "Impact", "impact_desc": "A class that speaks to the present moment and continues to resonate afterward.", "rabbi_name": "Rabbi Omer Davidovitz", "caption_sub": "Torah classes, talks and lectures for educational institutions, adults and youth", "opening_feedback": "In honor of the website launch — a new student testimonial:", "gallery_title": "Classes and lectures", "gallery_desc": "A selection of photos from classes, talks and meetings with diverse audiences.", "watch_title": "Watch classes", "watch_desc": "A selection of classes available directly from the YouTube channel.", "video1": "How do we prepare for Purim?", "video2": "Why were we created?", "video3": "Whom do we love more: those similar to us or those different from us?", "video4": "A class at Machon Ora", "topics_title": "Class topics", "topics_desc": "Book a one-time class, a series of sessions, an inspirational evening or a topic tailored to your audience.", "topic1": "Building character", "topic1_desc": "How to overcome jealousy, anger and laziness and build a strong, positive and healthy personality.", "topic2": "The teachings of Rabbi Kook", "topic2_desc": "A deeper understanding of redemption and the vision of the People of Israel, the Torah of Israel and the Land of Israel.", "topic3": "Clarifying faith", "topic3_desc": "Clear, structured answers to fundamental questions of Jewish faith.", "topic4": "The inner work of the festivals", "topic4_desc": "In-depth talks before the Jewish holidays and their inner meaning for our lives.", "topic5": "The generation of redemption", "topic5_desc": "The meaning of living in our generation, our responsibility and the privilege of taking part in the process.", "topic6": "Marriage and building a Jewish home", "topic6_desc": "Talks for adults about marriage, dating and building a home with maturity and faith.", "flyers_title": "Sample flyers", "flyers_desc": "A selection of flyers from classes, series and lectures.", "feedback_title": "Student testimonials", "feedback_desc": "Selected messages received after classes and talks.", "cta_title": "Book a class, talk or series of sessions", "cta_desc": "Tailored to the age group, institution, topic, schedule and purpose.", "cta_btn": "Contact on WhatsApp", "contact_title": "Contact", "phone": "📞 Phone", "email": "✉️ Email", "whatsapp": "💬 WhatsApp", "whatsapp_group": "👥 WhatsApp group", "youtube": "▶ YouTube channel", "wa_name1": "Yael, Machon Ora", "wa_name2": "Sarah, Machon Ora", "wa_name3": "Social coordinator, Ulpanat Reshit", "wa_name4": "Student, Midreshet Shalhevet HaNeshama", "wa_name5": "Torah Youth, Elkana", "wa_name6": "Bat Chen, Midreshet Orot Avital, Rehovot", "wa_aria": "Contact Rabbi Omer on WhatsApp", "previous": "Previous", "next": "Next", "close": "Close", "feedback1": "Sometimes I come to the seminary especially for these classes, and we all enjoy them very much.<br>Every class is powerful in the way it connects with daily life, and personally I begin applying it during the class itself.<br><br><br>Thank you very much.", "feedback2": "Hello, I wanted to thank you for all the classes!<br><br>Every week I looked forward to your class. It gave me strength and encouragement for the whole week and for life.<br><br>You always asked excellent questions and gave answers that were new to me.<br><br>Thank you again.", "feedback3": "Good evening, Rabbi.<br>The students enjoyed the talk very much and were very happy with it.<br>They asked for the Rabbi to come again. I would be glad to arrange another visit, be’ezrat Hashem.<br>Thank you!", "feedback4": "Rabbi, I remember last year’s Purim class very fondly.<br>It was my first class at the seminary.<br>I listened to it four more times afterward.<br>Ashreichem Yisrael.", "feedback5": "Good evening, Rabbi.<br>Thank you very much for the class. It was deep, moving and genuinely connected to the world of young people.<br>I felt there was room for questions and reflection — not only to listen, but to truly connect with what was said.<br><br>Many participants left with ideas to think about, and it was clear that the class touched them.<br>That is not something to take for granted, and it truly left an impression.<br>I hope there will be more opportunities for classes like this.<br>Thank you very much, Rabbi!", "feedback6": "Hello Rabbi Omer,<br>I would like to thank you for the classes over the past two years.<br>The classes always make me stop, think more deeply and gain a new perspective.<br><br>I especially connect with the way the learning combines a high level of Torah study with a meaningful connection to life.<br><br>Thank you very much!"}, "fr": {"hero_eyebrow": "Rav Omer Davidovitz • Cours de Torah pour écoles, séminaires, yéchivot et communautés", "hero_title": "Une Torah profonde qui parle à la vie", "hero_intro": "Des cours, conférences et interventions fondés sur la profondeur de la Torah, la clarté de la pensée, la compréhension de l’âme humaine et les questions de notre génération — dans un style vivant, touchant et porteur de sens.", "book_lesson": "Réserver un cours", "topics_button": "Thèmes des cours", "testimonials_button": "Témoignages", "depth": "Profondeur", "depth_desc": "Sources, pensée juive, enseignements du Rav Kook et questions fondamentales de la foi.", "connection": "Lien", "connection_desc": "Une véritable rencontre avec le monde des élèves, des adultes et des équipes éducatives.", "impact": "Impact", "impact_desc": "Un cours qui touche le présent et continue d’accompagner ensuite.", "rabbi_name": "Rav Omer Davidovitz", "caption_sub": "Cours, conférences et interventions pour institutions éducatives, adultes et jeunes", "opening_feedback": "À l’occasion du lancement du site — un nouveau témoignage d’élève :", "gallery_title": "Cours et conférences", "gallery_desc": "Une sélection de photos prises lors de cours, conférences et rencontres avec différents publics.", "watch_title": "Cours en vidéo", "watch_desc": "Une sélection de cours à regarder directement depuis la chaîne YouTube.", "video1": "Comment se préparer à Pourim ?", "video2": "Pourquoi avons-nous été créés ?", "video3": "Aimons-nous davantage ceux qui nous ressemblent ou ceux qui sont différents ?", "video4": "Cours à l’Institut Ora", "topics_title": "Thèmes des cours", "topics_desc": "Il est possible de réserver un cours unique, une série de rencontres, une soirée de renforcement ou un thème adapté au public.", "topic1": "Construction de la personnalité", "topic1_desc": "Comment surmonter la jalousie, la colère et la paresse, et construire une personnalité forte, positive et équilibrée.", "topic2": "Les enseignements du Rav Kook", "topic2_desc": "Approfondir la délivrance et la vision du peuple d’Israël, de la Torah d’Israël et de la terre d’Israël.", "topic3": "Clarifier la foi", "topic3_desc": "Des réponses claires et structurées aux questions fondamentales de la foi juive.", "topic4": "Le travail spirituel des fêtes", "topic4_desc": "Des conférences approfondies à l’approche des fêtes juives et sur leur sens intérieur pour la vie.", "topic5": "La génération de la délivrance", "topic5_desc": "Le sens de la vie dans notre génération, notre responsabilité et le mérite de participer à ce processus.", "topic6": "Mariage et construction du foyer juif", "topic6_desc": "Des conférences pour adultes sur le mariage, les rencontres et la construction du foyer avec maturité et émouna.", "flyers_title": "Exemples d’affiches", "flyers_desc": "Une sélection d’affiches de cours, séries et conférences.", "feedback_title": "Témoignages d’élèves", "feedback_desc": "Quelques messages reçus après des cours et conférences.", "cta_title": "Réserver un cours, une conférence ou une série de rencontres", "cta_desc": "Adapté à l’âge, au type d’institution, au thème, à l’horaire et à l’objectif.", "cta_btn": "Contacter sur WhatsApp", "contact_title": "Contact", "phone": "📞 Téléphone", "email": "✉️ E-mail", "whatsapp": "💬 WhatsApp", "whatsapp_group": "👥 Groupe WhatsApp", "youtube": "▶ Chaîne YouTube", "wa_name1": "Yaël, Institut Ora", "wa_name2": "Sarah, Institut Ora", "wa_name3": "Responsable sociale, Oulpanat Réchit", "wa_name4": "Élève, Midrechet Shalhevet HaNeshama", "wa_name5": "Torah Jeunesse, Elkana", "wa_name6": "Bat Chen, Midrechet Orot Avital, Rehovot", "wa_aria": "Contacter le Rav Omer sur WhatsApp", "previous": "Précédent", "next": "Suivant", "close": "Fermer", "feedback1": "Il m’arrive de venir au séminaire spécialement pour ces cours, et nous les apprécions toutes énormément.<br>Chaque cours est puissant par son lien avec la vie quotidienne, et personnellement je commence à le mettre en pratique pendant le cours lui-même.<br><br><br>Merci beaucoup.", "feedback2": "Bonjour, je voulais vous remercier pour tous les cours !<br><br>Chaque semaine, j’attendais votre cours avec impatience. Il me donnait de la force et m’encourageait pour toute la semaine et pour la vie.<br><br>Vous posiez toujours d’excellentes questions et donniez des réponses nouvelles pour moi.<br><br>Merci encore.", "feedback3": "Bonsoir Rav,<br>les élèves ont beaucoup apprécié la conférence et en sont sorties très heureuses.<br>Elles ont demandé que le Rav revienne. Je serais ravie d’organiser une nouvelle rencontre, bé’ezrat Hachem.<br>Merci !", "feedback4": "Rav, je garde un excellent souvenir du cours de Pourim de l’année dernière.<br>C’était mon premier cours au séminaire.<br>Je l’ai ensuite écouté quatre fois.<br>Ashrékhem Israël.", "feedback5": "Bonsoir Rav,<br>merci beaucoup pour le cours. Il était profond, touchant et vraiment relié au monde des jeunes.<br>J’ai senti qu’il y avait de la place pour les questions et la réflexion — pas seulement pour écouter, mais pour se relier réellement à ce qui était dit.<br><br>Beaucoup de jeunes sont repartis avec des idées à méditer, et l’on voyait que le cours les avait touchés.<br>Ce n’est pas évident, et cela a vraiment laissé une empreinte.<br>J’espère qu’il y aura d’autres occasions pour des cours comme celui-ci.<br>Un grand merci, Rav !", "feedback6": "Bonjour Rav Omer,<br>je souhaite vous remercier pour les cours de ces deux dernières années.<br>Les cours me poussent toujours à m’arrêter, réfléchir, approfondir et découvrir un nouveau point de vue.<br><br>J’apprécie particulièrement la méthode qui associe un haut niveau d’étude à un lien profond avec la vie.<br><br>Merci beaucoup !"}, "es": {"hero_eyebrow": "Rabino Omer Davidovitz • Clases de Torá para escuelas, midrashot, yeshivot y comunidades", "hero_title": "Torá profunda que habla a la vida", "hero_intro": "Clases, charlas y conferencias basadas en profundidad de Torá, claridad de pensamiento, conexión con el mundo interior y las preguntas de nuestra generación — de una manera viva, cercana y significativa.", "book_lesson": "Reservar una clase", "topics_button": "Temas de clases", "testimonials_button": "Testimonios", "depth": "Profundidad", "depth_desc": "Fuentes, pensamiento judío, enseñanzas del Rav Kook y preguntas fundamentales de emuná.", "connection": "Conexión", "connection_desc": "Un encuentro verdadero con el mundo de estudiantes, adultos y equipos educativos.", "impact": "Impacto", "impact_desc": "Una clase que toca el presente y continúa acompañando después.", "rabbi_name": "Rabino Omer Davidovitz", "caption_sub": "Clases, charlas y conferencias para instituciones educativas, adultos y jóvenes", "opening_feedback": "Con motivo del lanzamiento del sitio — un nuevo testimonio de un alumno:", "gallery_title": "Clases y conferencias", "gallery_desc": "Una selección de fotos de clases, charlas y encuentros con diferentes públicos.", "watch_title": "Clases para ver", "watch_desc": "Una selección de clases disponibles directamente desde el canal de YouTube.", "video1": "¿Cómo nos preparamos para Purim?", "video2": "¿Por qué fuimos creados?", "video3": "¿A quién amamos más: al que se parece a nosotros o al que es diferente?", "video4": "Clase en el Instituto Ora", "topics_title": "Temas de clases", "topics_desc": "Se puede reservar una clase única, una serie de encuentros, una velada de fortalecimiento o un tema adaptado especialmente al público.", "topic1": "Construcción del carácter", "topic1_desc": "Cómo enfrentar los celos, la ira y la pereza, y construir una personalidad fuerte, luminosa y sana.", "topic2": "Las enseñanzas del Rav Kook", "topic2_desc": "Profundizar en la redención y en la visión del pueblo de Israel, la Torá de Israel y la Tierra de Israel.", "topic3": "Clarificación de la fe", "topic3_desc": "Respuestas claras y estructuradas a las preguntas fundamentales de la fe judía.", "topic4": "El trabajo espiritual de las festividades", "topic4_desc": "Charlas profundas antes de las festividades judías y sobre su significado interior para la vida.", "topic5": "La generación de la redención", "topic5_desc": "El significado de vivir en nuestra generación, nuestra responsabilidad y el privilegio de formar parte del proceso.", "topic6": "Matrimonio y construcción del hogar judío", "topic6_desc": "Charlas para adultos sobre matrimonio, citas y construcción del hogar con madurez y emuná.", "flyers_title": "Ejemplos de afiches", "flyers_desc": "Una selección de afiches de clases, series y conferencias.", "feedback_title": "Testimonios de alumnos", "feedback_desc": "Algunos mensajes recibidos después de clases y charlas.", "cta_title": "Reservar una clase, charla o serie de encuentros", "cta_desc": "Adaptado a la edad, el tipo de institución, el tema, el horario y el objetivo.", "cta_btn": "Contactar por WhatsApp", "contact_title": "Contacto", "phone": "📞 Teléfono", "email": "✉️ Correo electrónico", "whatsapp": "💬 WhatsApp", "whatsapp_group": "👥 Grupo de WhatsApp", "youtube": "▶ Canal de YouTube", "wa_name1": "Yael, Instituto Ora", "wa_name2": "Sara, Instituto Ora", "wa_name3": "Coordinadora social, Ulpanat Reshit", "wa_name4": "Alumna, Midreshet Shalhevet HaNeshama", "wa_name5": "Torá Juvenil, Elkana", "wa_name6": "Bat Chen, Midreshet Orot Avital, Rejovot", "wa_aria": "Contactar al Rabino Omer por WhatsApp", "previous": "Anterior", "next": "Siguiente", "close": "Cerrar", "feedback1": "A veces voy al seminario especialmente por estas clases, y todas las disfrutamos muchísimo.<br>Cada clase es poderosa por su conexión con la vida cotidiana, y personalmente empiezo a aplicarla durante la misma clase.<br><br><br>Muchas gracias.", "feedback2": "Hola, quería agradecerle por todas las clases.<br><br>Cada semana esperaba su clase. Me daba fuerza y ánimo para toda la semana y para la vida.<br><br>Siempre hacía preguntas excelentes y daba respuestas que eran nuevas para mí.<br><br>Muchas gracias nuevamente.", "feedback3": "Buenas noches, Rabino.<br>Las alumnas disfrutaron muchísimo la charla y quedaron muy contentas.<br>Pidieron que el Rabino vuelva. Me alegrará coordinar otra visita, be’ezrat Hashem.<br>¡Gracias!", "feedback4": "Rabino, recuerdo con mucho cariño la clase de Purim del año pasado.<br>Fue mi primera clase en el seminario.<br>Después la escuché otras cuatro veces.<br>Ashreichem Israel.", "feedback5": "Buenas noches, Rabino.<br>Muchas gracias por la clase. Fue profunda, emotiva y realmente conectada con el mundo de los jóvenes.<br>Sentí que había espacio para preguntas y reflexión — no solo para escuchar, sino para conectarse de verdad con lo que se decía.<br><br>Muchos jóvenes salieron con ideas para pensar, y se veía que la clase los había tocado.<br>No es algo que deba darse por sentado, y realmente dejó una huella.<br>Espero que haya más oportunidades para clases así.<br>¡Muchas gracias, Rabino!", "feedback6": "Hola Rabino Omer,<br>quisiera agradecerle por las clases de los últimos dos años.<br>Las clases siempre me hacen detenerme, pensar, profundizar y recibir una nueva perspectiva.<br><br>Me identifico especialmente con la forma de estudio que combina un alto nivel de Torá con una conexión significativa con la vida.<br><br>¡Muchas gracias!"}, "pt": {"hero_eyebrow": "Rabino Omer Davidovitz • Aulas de Torá para escolas, midrashot, yeshivot e comunidades", "hero_title": "Torá profunda que fala com a vida", "hero_intro": "Aulas, palestras e encontros baseados em profundidade de Torá, clareza de pensamento, conexão com o mundo interior e com as perguntas da nossa geração — de forma viva, tocante e significativa.", "book_lesson": "Agendar uma aula", "topics_button": "Temas das aulas", "testimonials_button": "Depoimentos", "depth": "Profundidade", "depth_desc": "Fontes, pensamento judaico, ensinamentos do Rav Kook e questões fundamentais de emuná.", "connection": "Conexão", "connection_desc": "Um encontro verdadeiro com o mundo de alunos, adultos e equipes educacionais.", "impact": "Impacto", "impact_desc": "Uma aula que toca o presente e continua acompanhando depois.", "rabbi_name": "Rabino Omer Davidovitz", "caption_sub": "Aulas, palestras e encontros para instituições educacionais, adultos e jovens", "opening_feedback": "Em homenagem ao lançamento do site — um novo depoimento de aluno:", "gallery_title": "Aulas e palestras", "gallery_desc": "Uma seleção de fotos de aulas, palestras e encontros com diferentes públicos.", "watch_title": "Aulas para assistir", "watch_desc": "Uma seleção de aulas disponíveis diretamente no canal do YouTube.", "video1": "Como nos preparamos para Purim?", "video2": "Por que fomos criados?", "video3": "Quem amamos mais: quem é parecido conosco ou quem é diferente?", "video4": "Aula no Instituto Ora", "topics_title": "Temas das aulas", "topics_desc": "É possível agendar uma aula única, uma série de encontros, uma noite de fortalecimento ou um tema adaptado especialmente ao público.", "topic1": "Construção do caráter", "topic1_desc": "Como lidar com inveja, raiva e preguiça e construir uma personalidade forte, positiva e saudável.", "topic2": "Os ensinamentos do Rav Kook", "topic2_desc": "Aprofundar a redenção e a visão do povo de Israel, da Torá de Israel e da Terra de Israel.", "topic3": "Esclarecimento da fé", "topic3_desc": "Respostas claras e estruturadas às questões fundamentais da fé judaica.", "topic4": "O trabalho espiritual das festas", "topic4_desc": "Palestras profundas antes das festas judaicas e sobre seu significado interior para a vida.", "topic5": "A geração da redenção", "topic5_desc": "O significado de viver em nossa geração, nossa responsabilidade e o privilégio de participar desse processo.", "topic6": "Casamento e construção do lar judaico", "topic6_desc": "Palestras para adultos sobre casamento, encontros e construção do lar com maturidade e emuná.", "flyers_title": "Exemplos de cartazes", "flyers_desc": "Uma seleção de cartazes de aulas, séries e palestras.", "feedback_title": "Depoimentos de alunos", "feedback_desc": "Algumas mensagens recebidas após aulas e palestras.", "cta_title": "Agendar uma aula, palestra ou série de encontros", "cta_desc": "Adaptado à idade, ao tipo de instituição, ao tema, ao horário e ao objetivo.", "cta_btn": "Contato pelo WhatsApp", "contact_title": "Contato", "phone": "📞 Telefone", "email": "✉️ E-mail", "whatsapp": "💬 WhatsApp", "whatsapp_group": "👥 Grupo de WhatsApp", "youtube": "▶ Canal do YouTube", "wa_name1": "Yael, Instituto Ora", "wa_name2": "Sara, Instituto Ora", "wa_name3": "Coordenadora social, Ulpanat Reshit", "wa_name4": "Aluna, Midreshet Shalhevet HaNeshama", "wa_name5": "Torá Jovem, Elkana", "wa_name6": "Bat Chen, Midreshet Orot Avital, Rehovot", "wa_aria": "Contatar o Rabino Omer pelo WhatsApp", "previous": "Anterior", "next": "Próximo", "close": "Fechar", "feedback1": "Às vezes vou ao seminário especialmente para essas aulas, e todas nós gostamos muito delas.<br>Cada aula é poderosa pela conexão com a vida cotidiana, e pessoalmente começo a colocá-la em prática durante a própria aula.<br><br><br>Muito obrigada.", "feedback2": "Olá, gostaria de agradecer por todas as aulas.<br><br>Toda semana eu esperava pela sua aula. Ela me dava força e incentivo para a semana inteira e para a vida.<br><br>O senhor sempre fazia perguntas excelentes e apresentava respostas que eram novas para mim.<br><br>Muito obrigada novamente.", "feedback3": "Boa noite, Rabino.<br>As alunas gostaram muito da palestra e ficaram muito felizes.<br>Elas pediram que o Rabino venha novamente. Terei prazer em organizar outra visita, be’ezrat Hashem.<br>Obrigada!", "feedback4": "Rabino, lembro com muito carinho da aula de Purim do ano passado.<br>Foi minha primeira aula no seminário.<br>Depois eu a ouvi mais quatro vezes.<br>Ashreichem Israel.", "feedback5": "Boa noite, Rabino.<br>Muito obrigada pela aula. Foi profunda, tocante e realmente conectada ao mundo dos jovens.<br>Senti que havia espaço para perguntas e reflexão — não apenas para ouvir, mas para se conectar de verdade com o que foi dito.<br><br>Muitos jovens saíram com ideias para pensar, e dava para ver que a aula os tocou.<br>Isso não é algo óbvio, e realmente deixou uma marca.<br>Espero que haja mais oportunidades para aulas assim.<br>Muito obrigada, Rabino!", "feedback6": "Olá Rabino Omer,<br>gostaria de agradecer pelas aulas dos últimos dois anos.<br>As aulas sempre me fazem parar, pensar, aprofundar e receber uma nova perspectiva.<br><br>Gosto especialmente da forma de estudo que combina um alto nível de Torá com uma conexão significativa com a vida.<br><br>Muito obrigada!"}};
+
+function setSiteLanguage(lang){
+  if(!siteTranslations[lang]) lang = 'he';
+  const dict = siteTranslations[lang];
+  const isHebrew = lang === 'he';
+
+  document.documentElement.lang = lang;
+  document.documentElement.dir = isHebrew ? 'rtl' : 'ltr';
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if(dict[key] !== undefined) el.textContent = dict[key];
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.dataset.i18nHtml;
+    if(dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const key = el.dataset.i18nAriaLabel;
+    if(dict[key] !== undefined) el.setAttribute('aria-label', dict[key]);
+  });
+
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const key = el.dataset.i18nTitle;
+    if(dict[key] !== undefined) el.setAttribute('title', dict[key]);
+  });
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  localStorage.setItem('siteLanguage', lang);
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => setSiteLanguage(btn.dataset.lang));
+});
+
+setSiteLanguage(localStorage.getItem('siteLanguage') || 'he');
+</script>
 </body>
 </html>

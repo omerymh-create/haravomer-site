@@ -1215,6 +1215,12 @@ p{
   cursor:pointer;
   transition:.2s;
 }
+.lang-flag{
+  font-size:20px;
+  line-height:1;
+  display:inline-block;
+}
+
 .lang-btn:hover,
 .lang-btn.active{
   background:#172033;
@@ -1248,7 +1254,7 @@ html[dir="ltr"] .wa-topbar{
 }
 </style>
 </head>
-<body><div aria-label="בחירת שפה" class="language-switcher"><button class="lang-btn" data-lang="he" type="button">עברית</button><button class="lang-btn" data-lang="en" type="button">English</button><button class="lang-btn" data-lang="fr" type="button">Français</button><button class="lang-btn" data-lang="es" type="button">Español</button><button class="lang-btn" data-lang="pt" type="button">Português</button></div>
+<body><div aria-label="בחירת שפה" class="language-switcher"><button class="lang-btn" data-lang="he" type="button"><span class="lang-flag" aria-hidden="true">🇮🇱</span><span>עברית</span></button><button class="lang-btn" data-lang="en" type="button"><span class="lang-flag" aria-hidden="true">🇬🇧</span><span>English</span></button><button class="lang-btn" data-lang="fr" type="button"><span class="lang-flag" aria-hidden="true">🇫🇷</span><span>Français</span></button><button class="lang-btn" data-lang="es" type="button"><span class="lang-flag" aria-hidden="true">🇪🇸</span><span>Español</span></button><button class="lang-btn" data-lang="pt" type="button"><span class="lang-flag" aria-hidden="true">🇵🇹</span><span>Português</span></button></div>
 <a aria-label="להזמנת שיחה בוואטסאפ" class="floating-whatsapp" data-i18n-aria-label="wa_aria" data-i18n-title="wa_aria" href="https://wa.me/972506514877?text=שלום הרב עומר, רצינו לבדוק אפשרות להזמין שיעור" onclick="gtag('event','whatsapp_click')" rel="noopener" target="_blank" title="להזמנת שיחה בוואטסאפ">
 <svg aria-hidden="true" class="wa-icon" viewbox="0 0 32 32">
 <path d="M19.11 17.19c-.27-.14-1.58-.78-1.82-.87-.24-.09-.41-.14-.59.14-.18.27-.68.86-.84 1.03-.15.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.7-1.33-1.56-1.48-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.31.41-.46.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.59-1.43-.81-1.96-.21-.51-.42-.44-.59-.45h-.5c-.18 0-.45.07-.68.32-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.14.18 1.77 2.7 4.29 3.79.6.26 1.07.42 1.43.54.6.19 1.14.17 1.57.1.48-.07 1.58-.65 1.8-1.28.22-.63.22-1.17.15-1.28-.06-.11-.24-.18-.5-.32Z" fill="currentColor"></path>
